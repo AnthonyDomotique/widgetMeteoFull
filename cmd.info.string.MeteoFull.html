@@ -1,0 +1,1447 @@
+<div style="min-width:600px;max-width:800px;height:240px;" class="cmd tooltips cmd-widget" data-type="info" data-subtype="string" data-cmd_id="#id#" data-cmd_uid="#uid#">
+  <div id="meteoWidget" class="">
+    <div id="meteoEnTete" class="">
+      <div id="meteoVilleNom" class=""></div>
+      <div id="meteoHeureActualisation" class=""></div>
+    </div>
+    <div id="meteoPrevisionsJours" class="">
+	  <table>
+	    <tr>
+		  <td colspan="2" id="meteoPrevInstantDate" class="tableCmdcss meteoPrevJourDate meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Date" class="tableCmdcss meteoPrevJourDate meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Date" class="tableCmdcss meteoPrevJourDate meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Date" class="tableCmdcss meteoPrevJourDate meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Date" class="tableCmdcss meteoPrevJourDate meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Date" class="tableCmdcss meteoPrevJourDate meteoPrevJourList" data-day="4"></td>
+		</tr>
+		<tr>
+		  <td colspan="2" id="meteoPrevInstantIcon" class="tableCmdcss meteoPrevJourIcon meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Icon" class="tableCmdcss meteoPrevJourIcon meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Icon" class="tableCmdcss meteoPrevJourIcon meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Icon" class="tableCmdcss meteoPrevJourIcon meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Icon" class="tableCmdcss meteoPrevJourIcon meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Icon" class="tableCmdcss meteoPrevJourIcon meteoPrevJourList" data-day="4"></td>
+		</tr>
+		<tr>
+		  <td colspan="2" id="meteoPrevInstantCondition" class="tableCmdcss meteoPrevJourCondition meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Condition" class="tableCmdcss meteoPrevJourCondition meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Condition" class="tableCmdcss meteoPrevJourCondition meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Condition" class="tableCmdcss meteoPrevJourCondition meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Condition" class="tableCmdcss meteoPrevJourCondition meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Condition" class="tableCmdcss meteoPrevJourCondition meteoPrevJourList" data-day="4"></td>
+		</tr>
+		<tr>
+		  <td id="meteoPrevLegendeTemp" class="tableCmdcss meteoPrevLegende meteoPrevJourTemp"><img src="/data/customTemplates/dashboard/METEO/temp.png" title="Températures (°C)" /></td>
+		  <td id="meteoPrevInstantTemp" class="tableCmdcss meteoPrevJourTemp meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Temp" class="tableCmdcss meteoPrevJourTemp meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Temp" class="tableCmdcss meteoPrevJourTemp meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Temp" class="tableCmdcss meteoPrevJourTemp meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Temp" class="tableCmdcss meteoPrevJourTemp meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Temp" class="tableCmdcss meteoPrevJourTemp meteoPrevJourList" data-day="4"></td>
+		</tr>
+		<tr>
+		  <td id="meteoPrevLegendeVent" class="tableCmdcss meteoPrevLegende meteoPrevJourVent"><img src="/data/customTemplates/dashboard/METEO/vent.png" title="Vent (km/h - Dir Matin, Midi, Soir)" /></td>
+		  <td id="meteoPrevInstantVent" class="tableCmdcss meteoPrevJourVent meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Vent" class="tableCmdcss meteoPrevJourVent meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Vent" class="tableCmdcss meteoPrevJourVent meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Vent" class="tableCmdcss meteoPrevJourVent meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Vent" class="tableCmdcss meteoPrevJourVent meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Vent" class="tableCmdcss meteoPrevJourVent meteoPrevJourList" data-day="4"></td>
+		</tr>
+		<tr>
+		  <td id="meteoPrevLegendeRafale" class="tableCmdcss meteoPrevLegende meteoPrevJourRafale"><img src="/data/customTemplates/dashboard/METEO/rafale.png" title="Rafales (km/h)" /></td>
+		  <td id="meteoPrevInstantRafale" class="tableCmdcss meteoPrevJourRafale meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Rafale" class="tableCmdcss meteoPrevJourRafale meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Rafale" class="tableCmdcss meteoPrevJourRafale meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Rafale" class="tableCmdcss meteoPrevJourRafale meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Rafale" class="tableCmdcss meteoPrevJourRafale meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Rafale" class="tableCmdcss meteoPrevJourRafale meteoPrevJourList" data-day="4"></td>
+		</tr>
+		<tr>
+		  <td id="meteoPrevLegendePrecipit" class="tableCmdcss meteoPrevLegende meteoPrevJourPrecipit"><img src="/data/customTemplates/dashboard/METEO/precipitation.png" title="Précipitations (mm)" /></td>
+		  <td id="meteoPrevInstantPrecipit" class="tableCmdcss meteoPrevJourPrecipit meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Precipit" class="tableCmdcss meteoPrevJourPrecipit meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Precipit" class="tableCmdcss meteoPrevJourPrecipit meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Precipit" class="tableCmdcss meteoPrevJourPrecipit meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Precipit" class="tableCmdcss meteoPrevJourPrecipit meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Precipit" class="tableCmdcss meteoPrevJourPrecipit meteoPrevJourList" data-day="4"></td>
+		</tr>
+		<tr>
+		  <td id="meteoPrevLegendeHumidite" class="tableCmdcss meteoPrevLegende meteoPrevJourHumid"><img src="/data/customTemplates/dashboard/METEO/humidite.png" title="Humidité (%)" /></td>
+		  <td id="meteoPrevInstantHumidite" class="tableCmdcss meteoPrevJourHumid meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Humid" class="tableCmdcss meteoPrevJourHumid meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Humid" class="tableCmdcss meteoPrevJourHumid meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Humid" class="tableCmdcss meteoPrevJourHumid meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Humid" class="tableCmdcss meteoPrevJourHumid meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Humid" class="tableCmdcss meteoPrevJourHumid meteoPrevJourList" data-day="4"></td>
+		</tr>
+		<tr>
+		  <td id="meteoPrevLegendePression" class="tableCmdcss meteoPrevLegende meteoPrevJourPress"><img src="/data/customTemplates/dashboard/METEO/pression.png" title="Pression (Hpa)" /></td>
+		  <td id="meteoPrevInstantPression" class="tableCmdcss meteoPrevJourPress meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Press" class="tableCmdcss meteoPrevJourPress meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Press" class="tableCmdcss meteoPrevJourPress meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Press" class="tableCmdcss meteoPrevJourPress meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Press" class="tableCmdcss meteoPrevJourPress meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Press" class="tableCmdcss meteoPrevJourPress meteoPrevJourList" data-day="4"></td>
+		</tr>
+		<tr>
+		  <td id="meteoPrevLegendeSoleil" class="tableCmdcss meteoPrevLegende meteoPrevJourSoleil"><img src="/data/customTemplates/dashboard/METEO/soleil.png" title="Soleil" /></td>
+		  <td id="meteoPrevInstantSoleil" class="tableCmdcss meteoPrevJourSoleil meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Soleil" class="tableCmdcss meteoPrevJourSoleil meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Soleil" class="tableCmdcss meteoPrevJourSoleil meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Soleil" class="tableCmdcss meteoPrevJourSoleil meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Soleil" class="tableCmdcss meteoPrevJourSoleil meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Soleil" class="tableCmdcss meteoPrevJourSoleil meteoPrevJourList" data-day="4"></td>
+		</tr>
+		<tr>
+		  <td id="meteoPrevLegendeLune" class="tableCmdcss meteoPrevLegende meteoPrevJourLune"><img src="/data/customTemplates/dashboard/METEO/lune.png" title="Lune" /></td>
+		  <td id="meteoPrevInstantLune" class="tableCmdcss meteoPrevJourLune meteoPrevInstant"></td>
+		  <td id="meteoPrevJour0Lune" class="tableCmdcss meteoPrevJourLune meteoPrevJourList meteoPrevJourListActif" data-day="0"></td>
+		  <td id="meteoPrevJour1Lune" class="tableCmdcss meteoPrevJourLune meteoPrevJourList" data-day="1"></td>
+		  <td id="meteoPrevJour2Lune" class="tableCmdcss meteoPrevJourLune meteoPrevJourList" data-day="2"></td>
+		  <td id="meteoPrevJour3Lune" class="tableCmdcss meteoPrevJourLune meteoPrevJourList" data-day="3"></td>
+		  <td id="meteoPrevJour4Lune" class="tableCmdcss meteoPrevJourLune meteoPrevJourList" data-day="4"></td>
+		</tr>
+	  </table>
+    </div>
+    <div id="meteoPrevisionsHeures" class="">
+      <ul id="meteoPrevisionsHeuresList" class="">
+        <li id="meteoPrevJ0Heures" class="meteoPrevHeuresLi meteoPrevHeuresLiActif" data-day="0">
+          <table>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">00 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">01 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">02 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">03 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">04 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">05 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">06 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">07 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">08 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">09 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">10 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">11 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">12 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">13 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">14 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">15 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">16 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">17 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">18 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">19 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">20 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">21 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">22 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">23 <span class="meteoUnite">h</span></div></td>
+            </tr>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"></td>
+              <td id="meteoPrevJ0HrsCond00" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond01" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond02" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond03" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond04" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond05" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond06" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond07" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond08" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond09" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond10" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond11" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond12" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond13" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond14" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond15" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond16" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond17" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond18" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond19" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond20" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond21" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ0HrsCond22" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ0HrsCond23" class="tableCmdcss meteoPrevHeuresConditions"></td>
+            </tr>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/temp.png" title="Température (°C)" /></td>
+              <td id="meteoPrevJ0HrsTempPrev00" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev01" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev02" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev03" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev04" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev05" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev06" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev07" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev08" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev09" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev10" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev11" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev12" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev13" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev14" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev15" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev16" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev17" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev18" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev19" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev20" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev21" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ0HrsTempPrev22" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ0HrsTempPrev23" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/temp-ressentie.png" title="Température ressentie (°C)" /></td>
+              <td id="meteoPrevJ0HrsTempRess00" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess01" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess02" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess03" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess04" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess05" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess06" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess07" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess08" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess09" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess10" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess11" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess12" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess13" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess14" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess15" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess16" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess17" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess18" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess19" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess20" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess21" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ0HrsTempRess22" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ0HrsTempRess23" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/vent.png" title="Vitesse du vent (km/h)" /></td>
+              <td id="meteoPrevJ0HrsVent00" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent01" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent02" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent03" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent04" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent05" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent06" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent07" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent08" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent09" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent10" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent11" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent12" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent13" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent14" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent15" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent16" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent17" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent18" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent19" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent20" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent21" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ0HrsVent22" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ0HrsVent23" class="tableCmdcss meteoPrevHeuresVent"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/vent-dir.png" /></td>
+              <td id="meteoPrevJ0HrsVentDir00" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir01" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir02" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir03" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir04" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir05" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir06" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir07" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir08" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir09" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir10" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir11" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir12" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir13" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir14" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir15" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir16" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir17" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir18" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir19" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir20" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir21" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ0HrsVentDir22" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ0HrsVentDir23" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/rafale.png" title="Rafales (km/h)" /></td>
+              <td id="meteoPrevJ0HrsRafale00" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale01" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale02" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale03" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale04" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale05" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale06" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale07" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale08" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale09" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale10" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale11" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale12" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale13" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale14" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale15" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale16" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale17" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale18" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale19" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale20" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale21" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ0HrsRafale22" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ0HrsRafale23" class="tableCmdcss meteoPrevHeuresRafale"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/precipitation.png" title="Précipitations (mm)" /></td>
+              <td id="meteoPrevJ0HrsPrecipt00" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt01" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt02" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt03" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt04" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt05" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt06" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt07" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt08" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt09" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt10" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt11" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt12" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt13" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt14" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt15" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt16" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt17" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt18" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt19" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt20" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt21" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ0HrsPrecipt22" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ0HrsPrecipt23" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/humidite.png" title="Humidité (%)" /></td>
+              <td id="meteoPrevJ0HrsHumid00" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid01" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid02" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid03" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid04" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid05" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid06" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid07" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid08" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid09" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid10" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid11" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid12" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid13" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid14" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid15" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid16" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid17" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid18" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid19" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid20" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid21" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ0HrsHumid22" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ0HrsHumid23" class="tableCmdcss meteoPrevHeuresHumid"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/pression.png" title="Pression (Hpa)" /></td>
+              <td id="meteoPrevJ0HrsPression00" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression01" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression02" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression03" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression04" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression05" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression06" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression07" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression08" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression09" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression10" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression11" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression12" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression13" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression14" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression15" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression16" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression17" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression18" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression19" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression20" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression21" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ0HrsPression22" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ0HrsPression23" class="tableCmdcss meteoPrevHeuresPression"></td>
+            </tr>
+          </table>
+        </li>
+        <li id="meteoPrevJ1Heures" class="meteoPrevHeuresLi" data-day="1">
+          <table>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">00 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">01 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">02 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">03 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">04 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">05 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">06 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">07 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">08 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">09 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">10 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">11 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">12 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">13 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">14 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">15 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">16 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">17 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">18 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">19 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">20 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">21 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">22 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">23 <span class="meteoUnite">h</span></div></td>
+            </tr>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"></td>
+              <td id="meteoPrevJ1HrsCond00" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond01" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond02" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond03" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond04" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond05" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond06" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond07" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond08" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond09" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond10" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond11" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond12" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond13" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond14" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond15" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond16" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond17" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond18" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond19" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond20" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond21" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ1HrsCond22" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ1HrsCond23" class="tableCmdcss meteoPrevHeuresConditions"></td>
+            </tr>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/temp.png" title="Température (°C)" /></td>
+              <td id="meteoPrevJ1HrsTempPrev00" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev01" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev02" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev03" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev04" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev05" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev06" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev07" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev08" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev09" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev10" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev11" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev12" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev13" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev14" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev15" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev16" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev17" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev18" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev19" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev20" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev21" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ1HrsTempPrev22" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ1HrsTempPrev23" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/temp-ressentie.png" title="Température ressentie (°C)" /></td>
+              <td id="meteoPrevJ1HrsTempRess00" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess01" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess02" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess03" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess04" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess05" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess06" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess07" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess08" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess09" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess10" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess11" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess12" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess13" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess14" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess15" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess16" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess17" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess18" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess19" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess20" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess21" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ1HrsTempRess22" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ1HrsTempRess23" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/vent.png" title="Vitesse du vent (km/h)" /></td>
+              <td id="meteoPrevJ1HrsVent00" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent01" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent02" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent03" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent04" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent05" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent06" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent07" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent08" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent09" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent10" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent11" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent12" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent13" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent14" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent15" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent16" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent17" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent18" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent19" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent20" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent21" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ1HrsVent22" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ1HrsVent23" class="tableCmdcss meteoPrevHeuresVent"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/vent-dir.png" /></td>
+              <td id="meteoPrevJ1HrsVentDir00" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir01" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir02" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir03" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir04" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir05" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir06" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir07" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir08" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir09" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir10" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir11" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir12" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir13" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir14" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir15" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir16" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir17" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir18" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir19" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir20" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir21" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ1HrsVentDir22" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ1HrsVentDir23" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/rafale.png" title="Rafales (km/h)" /></td>
+              <td id="meteoPrevJ1HrsRafale00" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale01" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale02" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale03" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale04" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale05" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale06" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale07" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale08" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale09" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale10" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale11" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale12" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale13" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale14" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale15" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale16" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale17" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale18" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale19" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale20" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale21" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ1HrsRafale22" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ1HrsRafale23" class="tableCmdcss meteoPrevHeuresRafale"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/precipitation.png" title="Précipitations (mm)" /></td>
+              <td id="meteoPrevJ1HrsPrecipt00" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt01" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt02" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt03" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt04" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt05" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt06" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt07" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt08" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt09" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt10" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt11" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt12" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt13" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt14" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt15" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt16" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt17" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt18" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt19" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt20" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt21" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ1HrsPrecipt22" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ1HrsPrecipt23" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/humidite.png" title="Humidité (%)" /></td>
+              <td id="meteoPrevJ1HrsHumid00" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid01" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid02" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid03" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid04" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid05" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid06" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid07" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid08" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid09" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid10" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid11" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid12" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid13" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid14" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid15" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid16" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid17" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid18" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid19" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid20" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid21" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ1HrsHumid22" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ1HrsHumid23" class="tableCmdcss meteoPrevHeuresHumid"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/pression.png" title="Pression (Hpa)" /></td>
+              <td id="meteoPrevJ1HrsPression00" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression01" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression02" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression03" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression04" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression05" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression06" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression07" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression08" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression09" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression10" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression11" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression12" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression13" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression14" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression15" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression16" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression17" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression18" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression19" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression20" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression21" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ1HrsPression22" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ1HrsPression23" class="tableCmdcss meteoPrevHeuresPression"></td>
+            </tr>
+          </table>
+        </li>
+        <li id="meteoPrevJ2Heures" class="meteoPrevHeuresLi" data-day="2">
+          <table>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">00 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">01 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">02 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">03 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">04 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">05 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">06 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">07 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">08 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">09 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">10 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">11 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">12 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">13 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">14 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">15 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">16 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">17 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">18 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">19 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">20 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">21 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">22 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">23 <span class="meteoUnite">h</span></div></td>
+            </tr>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"></td>
+              <td id="meteoPrevJ2HrsCond00" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond01" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond02" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond03" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond04" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond05" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond06" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond07" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond08" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond09" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond10" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond11" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond12" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond13" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond14" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond15" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond16" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond17" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond18" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond19" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond20" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond21" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ2HrsCond22" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ2HrsCond23" class="tableCmdcss meteoPrevHeuresConditions"></td>
+            </tr>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/temp.png" title="Température (°C)" /></td>
+              <td id="meteoPrevJ2HrsTempPrev00" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev01" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev02" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev03" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev04" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev05" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev06" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev07" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev08" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev09" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev10" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev11" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev12" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev13" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev14" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev15" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev16" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev17" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev18" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev19" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev20" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev21" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ2HrsTempPrev22" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ2HrsTempPrev23" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/temp-ressentie.png" title="Température ressentie (°C)" /></td>
+              <td id="meteoPrevJ2HrsTempRess00" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess01" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess02" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess03" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess04" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess05" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess06" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess07" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess08" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess09" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess10" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess11" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess12" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess13" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess14" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess15" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess16" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess17" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess18" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess19" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess20" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess21" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ2HrsTempRess22" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ2HrsTempRess23" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/vent.png" title="Vitesse du vent (km/h)" /></td>
+              <td id="meteoPrevJ2HrsVent00" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent01" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent02" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent03" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent04" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent05" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent06" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent07" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent08" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent09" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent10" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent11" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent12" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent13" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent14" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent15" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent16" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent17" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent18" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent19" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent20" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent21" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ2HrsVent22" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ2HrsVent23" class="tableCmdcss meteoPrevHeuresVent"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/vent-dir.png" /></td>
+              <td id="meteoPrevJ2HrsVentDir00" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir01" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir02" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir03" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir04" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir05" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir06" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir07" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir08" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir09" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir10" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir11" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir12" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir13" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir14" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir15" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir16" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir17" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir18" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir19" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir20" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir21" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ2HrsVentDir22" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ2HrsVentDir23" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/rafale.png" title="Rafales (km/h)" /></td>
+              <td id="meteoPrevJ2HrsRafale00" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale01" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale02" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale03" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale04" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale05" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale06" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale07" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale08" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale09" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale10" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale11" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale12" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale13" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale14" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale15" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale16" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale17" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale18" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale19" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale20" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale21" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ2HrsRafale22" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ2HrsRafale23" class="tableCmdcss meteoPrevHeuresRafale"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/precipitation.png" title="Précipitations (mm)" /></td>
+              <td id="meteoPrevJ2HrsPrecipt00" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt01" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt02" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt03" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt04" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt05" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt06" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt07" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt08" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt09" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt10" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt11" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt12" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt13" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt14" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt15" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt16" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt17" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt18" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt19" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt20" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt21" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ2HrsPrecipt22" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ2HrsPrecipt23" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/humidite.png" title="Humidité (%)" /></td>
+              <td id="meteoPrevJ2HrsHumid00" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid01" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid02" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid03" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid04" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid05" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid06" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid07" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid08" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid09" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid10" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid11" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid12" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid13" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid14" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid15" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid16" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid17" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid18" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid19" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid20" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid21" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ2HrsHumid22" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ2HrsHumid23" class="tableCmdcss meteoPrevHeuresHumid"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/pression.png" title="Pression (Hpa)" /></td>
+              <td id="meteoPrevJ2HrsPression00" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression01" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression02" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression03" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression04" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression05" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression06" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression07" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression08" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression09" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression10" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression11" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression12" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression13" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression14" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression15" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression16" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression17" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression18" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression19" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression20" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression21" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ2HrsPression22" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ2HrsPression23" class="tableCmdcss meteoPrevHeuresPression"></td>
+            </tr>
+          </table>
+        </li>
+        <li id="meteoPrevJ3Heures" class="meteoPrevHeuresLi" data-day="3">
+          <table>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">00 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">01 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">02 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">03 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">04 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">05 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">06 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">07 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">08 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">09 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">10 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">11 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">12 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">13 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">14 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">15 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">16 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">17 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">18 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">19 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">20 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">21 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">22 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">23 <span class="meteoUnite">h</span></div></td>
+            </tr>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"></td>
+              <td id="meteoPrevJ3HrsCond00" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond01" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond02" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond03" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond04" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond05" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond06" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond07" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond08" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond09" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond10" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond11" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond12" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond13" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond14" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond15" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond16" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond17" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond18" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond19" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond20" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond21" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ3HrsCond22" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ3HrsCond23" class="tableCmdcss meteoPrevHeuresConditions"></td>
+            </tr>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/temp.png" title="Température (°C)" /></td>
+              <td id="meteoPrevJ3HrsTempPrev00" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev01" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev02" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev03" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev04" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev05" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev06" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev07" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev08" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev09" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev10" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev11" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev12" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev13" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev14" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev15" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev16" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev17" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev18" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev19" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev20" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev21" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ3HrsTempPrev22" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ3HrsTempPrev23" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/temp-ressentie.png" title="Température ressentie (°C)" /></td>
+              <td id="meteoPrevJ3HrsTempRess00" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess01" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess02" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess03" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess04" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess05" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess06" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess07" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess08" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess09" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess10" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess11" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess12" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess13" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess14" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess15" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess16" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess17" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess18" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess19" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess20" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess21" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ3HrsTempRess22" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ3HrsTempRess23" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/vent.png" title="Vitesse du vent (km/h)" /></td>
+              <td id="meteoPrevJ3HrsVent00" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent01" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent02" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent03" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent04" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent05" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent06" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent07" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent08" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent09" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent10" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent11" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent12" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent13" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent14" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent15" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent16" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent17" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent18" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent19" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent20" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent21" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ3HrsVent22" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ3HrsVent23" class="tableCmdcss meteoPrevHeuresVent"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/vent-dir.png" /></td>
+              <td id="meteoPrevJ3HrsVentDir00" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir01" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir02" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir03" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir04" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir05" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir06" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir07" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir08" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir09" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir10" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir11" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir12" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir13" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir14" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir15" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir16" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir17" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir18" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir19" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir20" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir21" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ3HrsVentDir22" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ3HrsVentDir23" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/rafale.png" title="Rafales (km/h)" /></td>
+              <td id="meteoPrevJ3HrsRafale00" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale01" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale02" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale03" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale04" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale05" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale06" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale07" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale08" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale09" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale10" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale11" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale12" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale13" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale14" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale15" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale16" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale17" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale18" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale19" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale20" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale21" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ3HrsRafale22" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ3HrsRafale23" class="tableCmdcss meteoPrevHeuresRafale"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/precipitation.png" title="Précipitations (mm)" /></td>
+              <td id="meteoPrevJ3HrsPrecipt00" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt01" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt02" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt03" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt04" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt05" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt06" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt07" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt08" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt09" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt10" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt11" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt12" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt13" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt14" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt15" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt16" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt17" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt18" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt19" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt20" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt21" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ3HrsPrecipt22" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ3HrsPrecipt23" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/humidite.png" title="Humidité (%)" /></td>
+              <td id="meteoPrevJ3HrsHumid00" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid01" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid02" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid03" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid04" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid05" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid06" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid07" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid08" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid09" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid10" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid11" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid12" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid13" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid14" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid15" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid16" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid17" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid18" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid19" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid20" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid21" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ3HrsHumid22" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ3HrsHumid23" class="tableCmdcss meteoPrevHeuresHumid"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/pression.png" title="Pression (Hpa)" /></td>
+              <td id="meteoPrevJ3HrsPression00" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression01" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression02" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression03" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression04" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression05" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression06" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression07" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression08" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression09" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression10" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression11" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression12" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression13" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression14" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression15" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression16" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression17" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression18" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression19" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression20" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression21" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ3HrsPression22" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ3HrsPression23" class="tableCmdcss meteoPrevHeuresPression"></td>
+            </tr>
+          </table>
+        </li>
+        <li id="meteoPrevJ4Heures" class="meteoPrevHeuresLi" data-day="4">
+          <table>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">00 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">01 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">02 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">03 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">04 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">05 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">06 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">07 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">08 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">09 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">10 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">11 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">12 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">13 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">14 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">15 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">16 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">17 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">18 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">19 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">20 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">21 <span class="meteoUnite">h</span></div></td>
+              <td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">22 <span class="meteoUnite">h</span></div></td><td class="tableCmdcss meteoPrevHeuresNumHrs"><div class="meteoHeure">23 <span class="meteoUnite">h</span></div></td>
+            </tr>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"></td>
+              <td id="meteoPrevJ4HrsCond00" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond01" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond02" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond03" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond04" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond05" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond06" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond07" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond08" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond09" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond10" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond11" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond12" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond13" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond14" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond15" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond16" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond17" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond18" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond19" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond20" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond21" class="tableCmdcss meteoPrevHeuresConditions"></td>
+              <td id="meteoPrevJ4HrsCond22" class="tableCmdcss meteoPrevHeuresConditions"></td><td id="meteoPrevJ4HrsCond23" class="tableCmdcss meteoPrevHeuresConditions"></td>
+            </tr>
+            <tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/temp.png" title="Température (°C)" /></td>
+              <td id="meteoPrevJ4HrsTempPrev00" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev01" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev02" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev03" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev04" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev05" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev06" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev07" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev08" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev09" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev10" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev11" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev12" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev13" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev14" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev15" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev16" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev17" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev18" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev19" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev20" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev21" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+              <td id="meteoPrevJ4HrsTempPrev22" class="tableCmdcss meteoPrevHeuresTempPrev"></td><td id="meteoPrevJ4HrsTempPrev23" class="tableCmdcss meteoPrevHeuresTempPrev"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/temp-ressentie.png" title="Température ressentie (°C)" /></td>
+              <td id="meteoPrevJ4HrsTempRess00" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess01" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess02" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess03" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess04" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess05" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess06" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess07" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess08" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess09" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess10" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess11" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess12" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess13" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess14" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess15" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess16" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess17" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess18" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess19" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess20" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess21" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+              <td id="meteoPrevJ4HrsTempRess22" class="tableCmdcss meteoPrevHeuresTempRess"></td><td id="meteoPrevJ4HrsTempRess23" class="tableCmdcss meteoPrevHeuresTempRess"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/vent.png" title="Vitesse du vent (km/h)" /></td>
+              <td id="meteoPrevJ4HrsVent00" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent01" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent02" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent03" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent04" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent05" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent06" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent07" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent08" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent09" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent10" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent11" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent12" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent13" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent14" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent15" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent16" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent17" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent18" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent19" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent20" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent21" class="tableCmdcss meteoPrevHeuresVent"></td>
+              <td id="meteoPrevJ4HrsVent22" class="tableCmdcss meteoPrevHeuresVent"></td><td id="meteoPrevJ4HrsVent23" class="tableCmdcss meteoPrevHeuresVent"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/vent-dir.png" /></td>
+              <td id="meteoPrevJ4HrsVentDir00" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir01" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir02" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir03" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir04" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir05" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir06" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir07" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir08" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir09" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir10" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir11" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir12" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir13" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir14" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir15" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir16" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir17" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir18" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir19" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir20" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir21" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+              <td id="meteoPrevJ4HrsVentDir22" class="tableCmdcss meteoPrevHeuresVentDir"></td><td id="meteoPrevJ4HrsVentDir23" class="tableCmdcss meteoPrevHeuresVentDir"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/rafale.png" title="Rafales (km/h)" /></td>
+              <td id="meteoPrevJ4HrsRafale00" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale01" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale02" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale03" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale04" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale05" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale06" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale07" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale08" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale09" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale10" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale11" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale12" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale13" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale14" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale15" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale16" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale17" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale18" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale19" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale20" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale21" class="tableCmdcss meteoPrevHeuresRafale"></td>
+              <td id="meteoPrevJ4HrsRafale22" class="tableCmdcss meteoPrevHeuresRafale"></td><td id="meteoPrevJ4HrsRafale23" class="tableCmdcss meteoPrevHeuresRafale"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/precipitation.png" title="Précipitations (mm)" /></td>
+              <td id="meteoPrevJ4HrsPrecipt00" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt01" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt02" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt03" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt04" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt05" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt06" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt07" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt08" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt09" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt10" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt11" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt12" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt13" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt14" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt15" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt16" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt17" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt18" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt19" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt20" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt21" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+              <td id="meteoPrevJ4HrsPrecipt22" class="tableCmdcss meteoPrevHeuresPrecipt"></td><td id="meteoPrevJ4HrsPrecipt23" class="tableCmdcss meteoPrevHeuresPrecipt"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/humidite.png" title="Humidité (%)" /></td>
+              <td id="meteoPrevJ4HrsHumid00" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid01" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid02" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid03" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid04" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid05" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid06" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid07" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid08" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid09" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid10" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid11" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid12" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid13" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid14" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid15" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid16" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid17" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid18" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid19" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid20" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid21" class="tableCmdcss meteoPrevHeuresHumid"></td>
+              <td id="meteoPrevJ4HrsHumid22" class="tableCmdcss meteoPrevHeuresHumid"></td><td id="meteoPrevJ4HrsHumid23" class="tableCmdcss meteoPrevHeuresHumid"></td>
+            </tr>
+			<tr>
+              <td id="" class="tableCmdcss meteoPrevHeuresEnTeteCol"><img src="/data/customTemplates/dashboard/METEO/pression.png" title="Pression (Hpa)" /></td>
+              <td id="meteoPrevJ4HrsPression00" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression01" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression02" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression03" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression04" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression05" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression06" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression07" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression08" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression09" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression10" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression11" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression12" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression13" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression14" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression15" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression16" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression17" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression18" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression19" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression20" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression21" class="tableCmdcss meteoPrevHeuresPression"></td>
+              <td id="meteoPrevJ4HrsPression22" class="tableCmdcss meteoPrevHeuresPression"></td><td id="meteoPrevJ4HrsPression23" class="tableCmdcss meteoPrevHeuresPression"></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <style>
+    /* COULEUR TEMPERATURE */
+	:root {
+		--temp60: rgb(150,20,100);
+		--temp59: rgb(160,20,115);
+		--temp58: rgb(170,20,130);
+		--temp57: rgb(180,20,145);
+		--temp56: rgb(190,20,160);
+		--temp55: rgb(200,20,175);
+		--temp54: rgb(210,20,190);
+		--temp53: rgb(220,20,175);
+		--temp52: rgb(230,20,160);
+		--temp51: rgb(240,20,145);
+		--temp50: rgb(250,20,130);
+		--temp49: rgb(255,20,115);
+		--temp48: rgb(255,20,100);
+		--temp47: rgb(255,20,85);
+		--temp46: rgb(255,20,70);
+		--temp45: rgb(255,20,55);
+		--temp44: rgb(255,20,40);
+		--temp43: rgb(255,20,25);
+		--temp42: rgb(255,35,10);
+		--temp41: rgb(255,50,0);
+		--temp40: rgb(255,65,0);
+		--temp39: rgb(255,80,0);
+		--temp38: rgb(255,95,0);
+		--temp37: rgb(255,110,0);
+		--temp36: rgb(255,125,0);
+		--temp35: rgb(255,140,0);
+		--temp34: rgb(255,155,0);
+		--temp33: rgb(255,170,0);
+		--temp32: rgb(255,185,0);
+		--temp31: rgb(255,200,0);
+		--temp30: rgb(240,215,0);
+		--temp29: rgb(225,230,0);
+		--temp28: rgb(210,245,0);
+		--temp27: rgb(195,255,0);
+		--temp26: rgb(180,255,0);
+		--temp25: rgb(165,255,0);
+		--temp24: rgb(150,255,0);
+		--temp23: rgb(135,255,0);
+		--temp22: rgb(120,255,0);
+		--temp21: rgb(105,255,0);
+		--temp20: rgb(90,255,0);
+		--temp19: rgb(75,255,15);
+		--temp18: rgb(60,255,30);
+		--temp17: rgb(45,255,45);
+		--temp16: rgb(30,255,60);
+		--temp15: rgb(15,255,75);
+		--temp14: rgb(0,255,90);
+		--temp13: rgb(0,255,105);
+		--temp12: rgb(0,255,120);
+		--temp11: rgb(0,255,135);
+		--temp10: rgb(0,255,150);
+		--temp9: rgb(0,255,165);
+		--temp8: rgb(0,255,180);
+		--temp7: rgb(0,255,195);
+		--temp6: rgb(5,240,210);
+		--temp5: rgb(10,225,225);
+		--temp4: rgb(15,210,240);
+		--temp3: rgb(20,195,255);
+		--temp2: rgb(25,180,255);
+		--temp1: rgb(30,165,255);
+		--temp0: rgb(35,150,255);
+		--temp-1: rgb(40,135,255);
+		--temp-2: rgb(45,120,255);
+		--temp-3: rgb(50,105,255);
+		--temp-4: rgb(55,90,255);
+		--temp-5: rgb(60,75,255);
+		--temp-6: rgb(65,60,255);
+		--temp-7: rgb(70,45,255);
+		--temp-8: rgb(75,30,255);
+		--temp-9: rgb(80,15,255);
+		--temp-10: rgb(85,0,255);
+		--temp-11: rgb(90,0,255);
+		--temp-12: rgb(95,0,255);
+		--temp-13: rgb(100,0,245);
+		--temp-14: rgb(100,0,235);
+		--temp-15: rgb(100,0,225);
+		--temp-16: rgb(100,0,215);
+		--temp-17: rgb(100,0,205);
+		--temp-18: rgb(100,0,195);
+		--temp-19: rgb(100,0,185);
+		--temp-20: rgb(100,0,175);
+		--temp-21: rgb(100,0,165);
+		--temp-22: rgb(100,0,155);
+		--temp-23: rgb(100,0,150);
+		--temp-24: rgb(100,0,145);
+		--temp-25: rgb(100,0,140);
+		
+		--tempFont60: rgb(38,38,38);
+		--tempFont59: rgb(38,38,38);
+		--tempFont58: rgb(38,38,38);
+		--tempFont57: rgb(38,38,38);
+		--tempFont56: rgb(38,38,38);
+		--tempFont55: rgb(38,38,38);
+		--tempFont54: rgb(38,38,38);
+		--tempFont53: rgb(38,38,38);
+		--tempFont52: rgb(38,38,38);
+		--tempFont51: rgb(38,38,38);
+		--tempFont50: rgb(38,38,38);
+		--tempFont49: rgb(38,38,38);
+		--tempFont48: rgb(38,38,38);
+		--tempFont47: rgb(38,38,38);
+		--tempFont46: rgb(38,38,38);
+		--tempFont45: rgb(38,38,38);
+		--tempFont44: rgb(38,38,38);
+		--tempFont43: rgb(38,38,38);
+		--tempFont42: rgb(38,38,38);
+		--tempFont41: rgb(38,38,38);
+		--tempFont40: rgb(38,38,38);
+		--tempFont39: rgb(38,38,38);
+		--tempFont38: rgb(38,38,38);
+		--tempFont37: rgb(38,38,38);
+		--tempFont36: rgb(38,38,38);
+		--tempFont35: rgb(38,38,38);
+		--tempFont34: rgb(38,38,38);
+		--tempFont33: rgb(38,38,38);
+		--tempFont32: rgb(38,38,38);
+		--tempFont31: rgb(38,38,38);
+		--tempFont30: rgb(38,38,38);
+		--tempFont29: rgb(38,38,38);
+		--tempFont28: rgb(38,38,38);
+		--tempFont27: rgb(38,38,38);
+		--tempFont26: rgb(38,38,38);
+		--tempFont25: rgb(38,38,38);
+		--tempFont24: rgb(38,38,38);
+		--tempFont23: rgb(38,38,38);
+		--tempFont22: rgb(38,38,38);
+		--tempFont21: rgb(38,38,38);
+		--tempFont20: rgb(38,38,38);
+		--tempFont19: rgb(38,38,38);
+		--tempFont18: rgb(38,38,38);
+		--tempFont17: rgb(38,38,38);
+		--tempFont16: rgb(38,38,38);
+		--tempFont15: rgb(38,38,38);
+		--tempFont14: rgb(38,38,38);
+		--tempFont13: rgb(38,38,38);
+		--tempFont12: rgb(38,38,38);
+		--tempFont11: rgb(38,38,38);
+		--tempFont10: rgb(38,38,38);
+		--tempFont9: rgb(38,38,38);
+		--tempFont8: rgb(38,38,38);
+		--tempFont7: rgb(38,38,38);
+		--tempFont6: rgb(38,38,38);
+		--tempFont5: rgb(38,38,38);
+		--tempFont4: rgb(38,38,38);
+		--tempFont3: rgb(38,38,38);
+		--tempFont2: rgb(38,38,38);
+		--tempFont1: rgb(38,38,38);
+		--tempFont0: rgb(38,38,38);
+		--tempFont-1: rgb(172,172,172);
+		--tempFont-2: rgb(172,172,172);
+		--tempFont-3: rgb(172,172,172);
+		--tempFont-4: rgb(172,172,172);
+		--tempFont-5: rgb(172,172,172);
+		--tempFont-6: rgb(172,172,172);
+		--tempFont-7: rgb(172,172,172);
+		--tempFont-8: rgb(172,172,172);
+		--tempFont-9: rgb(172,172,172);
+		--tempFont-10: rgb(172,172,172);
+		--tempFont-11: rgb(172,172,172);
+		--tempFont-12: rgb(172,172,172);
+		--tempFont-13: rgb(172,172,172);
+		--tempFont-14: rgb(172,172,172);
+		--tempFont-15: rgb(172,172,172);
+		--tempFont-16: rgb(172,172,172);
+		--tempFont-17: rgb(172,172,172);
+		--tempFont-18: rgb(172,172,172);
+		--tempFont-19: rgb(172,172,172);
+		--tempFont-20: rgb(172,172,172);
+		--tempFont-21: rgb(172,172,172);
+		--tempFont-22: rgb(172,172,172);
+		--tempFont-23: rgb(172,172,172);
+		--tempFont-24: rgb(172,172,172);
+		--tempFont-25: rgb(172,172,172);
+		
+		--uv1: rgb(60,209,0);
+		--uv2: rgb(182,206,0);
+		--uv3: rgb(229,202,0);
+		--uv4: rgb(228,153,8);
+		--uv5: rgb(227,111,20);
+		--uv6: rgb(225,71,26);
+		--uv7: rgb(224,0,28);
+		--uv8: rgb(209,0,26);
+		--uv9: rgb(228,0,104);
+		--uv10: rgb(229,0,200);
+		--uv11: rgb(115,35,188);
+
+
+		--uvFont1: rgb(38,38,38);
+		--uvFont2: rgb(38,38,38);
+		--uvFont3: rgb(38,38,38);
+		--uvFont4: rgb(38,38,38);
+		--uvFont5: rgb(217,217,217);
+		--uvFont6: rgb(217,217,217);
+		--uvFont7: rgb(217,217,217);
+		--uvFont8: rgb(217,217,217);
+		--uvFont9: rgb(217,217,217);
+		--uvFont10: rgb(217,217,217);
+		--uvFont11: rgb(217,217,217);
+
+
+	}
+	
+    /* CSS GLOBAL */
+	#meteoWidget {
+	  width: 100%;
+	  color: rgb(172,172,172);
+	}
+	#meteoWidget table {
+	  background-color: transparent !important;	  
+	}
+	#meteoWidget tr {
+	  background-color: transparent !important;
+	  height: 15px;
+	}
+	#meteoWidget .meteoUnite {
+	  font-size: 0.7em;
+	}
+	#meteoWidget .meteoUniteHeures {
+	  font-size: 0.7em;
+	  display: none;
+	}
+	/* CSS TABLEAU DES JOURS */
+	td:not(.meteoPrevLegende) {
+	  padding: 2px 5px;;
+	  text-align: center;
+	  white-space: nowrap;
+	  box-sizing: border-box;
+	  font-size: 1em;
+	  margin: 0;
+	  text-align: center;
+	  user-select: none;
+	}
+	.meteoPrevLegende {
+	  padding: 2px 5px;
+	  width: 20px !important;
+	  text-align: center;
+	}
+	.meteoPrevLegende img {
+	  height: 15px;
+	}
+	.meteoPrevInstant {
+	  width: 150px !important;
+	}
+    .meteoPrevJourList {
+	  cursor: pointer !important;
+	  width: 110px !important
+	}
+    .meteoPrevJourDate {
+	  font-style: normal;
+    }
+	.meteoPrevJourDateDivNom {
+	  margin-bottom: 5px;
+	}
+	.meteoPrevJourDateDivDate {
+	}
+    .meteoPrevJourIcon {
+	  height: 80px;
+    }
+    .meteoPrevJourIcon img {
+	  max-width: 80px;
+	  max-height: 80px;
+    }
+    .meteoPrevJourCondition {
+	  font-style: italic;
+    }
+    .meteoPrevJourTemp {
+    }
+	.meteoPrevJourTemp div {
+	  padding: 2px 5px;
+    }
+	.meteoPrevJourTemp div.meteoTempMini {
+	  background-color: #0000a0;
+	  margin-left: 7px;
+	  width: 40px !important;
+	  float: left;
+    }
+	div.meteoTempMini span {
+	  background-color: #0000a0;
+    }
+	.meteoPrevJourTemp div.meteoTempMax {
+	  background-color: #a00000;
+	  font-weight: bold;
+	  width: 40px !important;
+	  float: left;
+	  margin-left: 6px;
+    }
+	div.meteoTempMax span {
+	  background-color: #a00000;
+    }
+	.meteoPrevJourLune:not(meteoPrevJourListActif) {
+	  border-bottom: 3px solid rgba(161,156,190,0.5) !important;
+	}
+	.meteoPrevJourLune.meteoPrevJourListActif {
+	  border-bottom: none !important;
+	}
+	.meteoPrevJourDate {
+	  border-bottom: 1px dashed rgb(55,55,55) !important;
+	  border-left: 1px solid transparent !important;
+	  border-right: 1px solid transparent !important;
+	}
+	.meteoPrevJourIcon,
+	.meteoPrevJourCondition,
+	.meteoPrevJourTemp,
+	.meteoPrevJourVent,
+	.meteoPrevJourVentDir,
+	.meteoPrevJourRafale,
+	.meteoPrevJourPrecipit,
+	.meteoPrevJourHumid,
+	.meteoPrevJourPress,
+	.meteoPrevJourSoleil	{
+	  border-top: 1px dashed rgb(55,55,55) !important;
+	  border-bottom: 1px dashed rgb(55,55,55) !important;
+	  border-left: 1px solid transparent !important;
+	  border-right: 1px solid transparent !important;
+	}
+	.meteoPrevJourLune {
+	  border-top: 1px dashed rgb(55,55,55) !important;
+	  border-left: 1px solid transparent !important;
+	  border-right: 1px solid transparent !important;
+	}
+	.meteoPrevJourLune img {
+	  max-width: 20px;
+	}
+	.meteoPrevJourSoleil, .meteoPrevJourLune {
+	  font-size: 0.9em !important;
+	}
+	td.meteoPrevJourList:not(meteoPrevJourListActif) {
+	  background-color: rgb(38,38,38);
+	}
+	.meteoPrevJourListActif	{
+	  background-color: transparent !important;
+	}
+	.meteoPrevJourDate.meteoPrevJourListActif {
+	  border-top: 5px solid rgba(161,156,190,0.5) !important;
+	}
+	.meteoPrevJourDate:not(meteoPrevJourListActif) {
+	  border-top: 5px solid transparent !important
+	}
+	.meteoPrevJourListHover {
+	  background-color: rgba(161,156,190,0.3) !important;
+	}
+	.meteoPrevInstant {
+	  border-right: 1px solid rgba(161,156,190,0.3) !important;
+	}	
+	/* CSS TABLEAU HEURES */
+	#meteoPrevisionsHeures {
+	  margin: 0;
+	  padding: 0;
+	}
+	#meteoPrevisionsHeuresList {
+	  margin-left: -35px;
+	  display: inline-flex;
+	  -webkit-transition: transform 0.6s ease;
+	  -moz-transition: transform 0.6s ease;
+	  -ms-transition: transform 0.6s ease;
+	  -o-transition: transform 0.6s ease;
+	  transition: transform 0.6s ease;
+	}
+	.meteoPrevHeuresLi {
+	  display: inline-block;
+	  box-sizing: border-box;
+	  overflow: hidden;
+	  list-style: none;
+	  margin-top: 10px;
+	  margin-right: 10px;
+	  border-bottom: 3px solid rgba(161,156,190,0.5) !important;
+	}
+	.meteoPrevHeuresLi table {
+	  margin-bottom: 10px;
+	}
+	.meteoPrevHeuresLi td:not(.meteoPrevHeuresNumHrs) {
+	  font-size: 0.8em !important;
+	  padding: 1px !important;
+	}
+	.meteoPrevHeuresNumHrs {
+	  padding: 0 5px;
+	  font-weight: bold;
+	  width: 30px;
+	}	
+	.meteoHeure {
+	  vertical-align: baseline;
+	}
+	.meteoPrevHeuresEnTeteCol img {
+	  max-width: 20px;
+	  max-height: 15px;
+	}
+	.meteoPrevHeuresLi img {
+	  max-width: 20px;
+	}
+	.meteoPrevHeuresNumHrs:not(.meteoPrevHeuresEnTeteCol),
+	.meteoPrevHeuresConditions:not(.meteoPrevHeuresEnTeteCol),
+	.meteoPrevHeuresTempPrev,
+	.meteoPrevHeuresTempRess,
+	.meteoPrevHeuresVent,
+	.meteoPrevHeuresVentDir,
+	.meteoPrevHeuresRafale,
+	.meteoPrevHeuresPrecipt,
+	.meteoPrevHeuresHumid {
+	  border-bottom: 1px dashed rgb(55,55,55) !important;
+	}
+  </style>
+  <script>
+    function fetch() {
+      var lat = ('#lat#' != '#'+'lat#') ? "#lat#" : "";
+	  var lon = ('#lon#' != '#'+'lon#') ? "#lon#" : "";
+      var cheminImage = ('#image#' != '#'+'image#') ? "#image#" : "https://www.prevision-meteo.ch/style/images/icon/"; 
+      var url = "https://www.prevision-meteo.ch/services/json/lat=" + lat + "lng=" + lon;
+      $.getJSON(url, function(dataWeather) {
+        //$('#meteoVilleNom').html(dataWeather.city_info.name);
+        $('#meteoHeureActualisation').html("Le " + dataWeather.current_condition.date + ' à ' + dataWeather.current_condition.hour);
+        
+		// CHARGEMENT DONNEES PAR JOURS
+        $('#meteoPrevInstantDate').html("<div class='meteoPrevJourDateDivNom'>En ce moment</div><div class='meteoPrevJourDateDivDate'>"+dataWeather.current_condition.hour+"</div>");
+        $('#meteoPrevInstantIcon').html("<img src='"+cheminImage+dataWeather.current_condition.condition_key+".png' title='"+dataWeather.current_condition.condition+"' alt='"+dataWeather.current_condition.condition+"' />");
+        $('#meteoPrevInstantCondition').html(dataWeather.current_condition.condition);
+        $('#meteoPrevInstantTemp').html(dataWeather.current_condition.tmp + " <span class='meteoUnite'>°C</span>");
+        $('#meteoPrevInstantVent').html(dataWeather.current_condition.wnd_spd + " <span class='meteoUnite'>km/h</span> - " + dataWeather.current_condition.wnd_dir);
+        $('#meteoPrevInstantRafale').html(dataWeather.current_condition.wnd_gust + " <span class='meteoUnite'>km/h</span>");
+        $('#meteoPrevInstantHumidite').html(dataWeather.current_condition.humidity + " <span class='meteoUnite'>%</span>");
+        $('#meteoPrevInstantPression').html(Math.round(dataWeather.current_condition.pressure) + " <span class='meteoUnite'>Hpa</span>");
+		
+        $('#meteoPrevJour0Date').html("<div class='meteoPrevJourDateDivNom meteoPrevJourList' data-day='0'>"+dataWeather.fcst_day_0.day_long+"</div><div class='meteoPrevJourDateDivDate meteoPrevJourList' data-day='0'>Aujourd'hui</div>");        
+        $('#meteoPrevJour0Icon').html("<img class='meteoPrevJourList' data-day='0' src='"+cheminImage+dataWeather.fcst_day_0.condition_key+".png' title='"+dataWeather.fcst_day_0.condition+"' alt='"+dataWeather.fcst_day_0.condition+"' />");
+        $('#meteoPrevJour0Condition').html("<div class='meteoPrevJourList' data-day='0'>"+dataWeather.fcst_day_0.condition+"</div>");
+        $('#meteoPrevJour0Temp').html("<div class='meteoTempMini meteoPrevJourList' data-day='0'>"+dataWeather.fcst_day_0.tmin + " <span class='meteoUnite meteoPrevJourList' data-day='0'>°C</span></div>  <div class='meteoTempMax meteoPrevJourList' data-day='0'>" + dataWeather.fcst_day_0.tmax + " <span class='meteoUnite meteoPrevJourList' data-day='0'>°C</span></div>");
+        
+        $('#meteoPrevJour1Date').html("<div class='meteoPrevJourDateDivNom meteoPrevJourList' data-day='1'>"+dataWeather.fcst_day_1.day_long+"</div><div class='meteoPrevJourDateDivDate meteoPrevJourList' data-day='1'>Demain</div>");
+        $('#meteoPrevJour1Icon').html("<img class='meteoPrevJourList' data-day='1' src='"+cheminImage+dataWeather.fcst_day_1.condition_key+".png' title='"+dataWeather.fcst_day_1.condition+"' alt='"+dataWeather.fcst_day_1.condition+"' />");
+        $('#meteoPrevJour1Condition').html("<div class='meteoPrevJourList' data-day='1'>"+dataWeather.fcst_day_1.condition+"</div>");
+        $('#meteoPrevJour1Temp').html("<div class='meteoTempMini meteoPrevJourList' data-day='1'>"+dataWeather.fcst_day_1.tmin + " <span class='meteoUnite meteoPrevJourList' data-day='1'>°C</span></div>  <div class='meteoTempMax meteoPrevJourList' data-day='1'>" + dataWeather.fcst_day_1.tmax + " <span class='meteoUnite meteoPrevJourList' data-day='1'>°C</span></div>");
+        
+        $('#meteoPrevJour2Date').html("<div class='meteoPrevJourDateDivNom meteoPrevJourList' data-day='2'>"+dataWeather.fcst_day_2.day_long+"</div><div class='meteoPrevJourDateDivDate meteoPrevJourList' data-day='2'>"+dataWeather.fcst_day_2.date+"</div>");
+        $('#meteoPrevJour2Icon').html("<img class='meteoPrevJourList' data-day='2' src='"+cheminImage+dataWeather.fcst_day_2.condition_key+".png' title='"+dataWeather.fcst_day_2.condition+"' alt='"+dataWeather.fcst_day_2.condition+"' />");
+        $('#meteoPrevJour2Condition').html("<div class='meteoPrevJourList' data-day='2'>"+dataWeather.fcst_day_2.condition+"</div>");
+        $('#meteoPrevJour2Temp').html("<div class='meteoTempMini meteoPrevJourList' data-day='2'>"+dataWeather.fcst_day_2.tmin + " <span class='meteoUnite meteoPrevJourList' data-day='2'>°C</span></div>  <div class='meteoTempMax meteoPrevJourList' data-day='2'>" + dataWeather.fcst_day_2.tmax + " <span class='meteoUnite meteoPrevJourList' data-day='2'>°C</span></div>");
+        
+        $('#meteoPrevJour3Date').html("<div class='meteoPrevJourDateDivNom meteoPrevJourList' data-day='3'>"+dataWeather.fcst_day_3.day_long+"</div><div class='meteoPrevJourDateDivDate meteoPrevJourList' data-day='3'>"+dataWeather.fcst_day_3.date+"</div>");
+        $('#meteoPrevJour3Icon').html("<img class='meteoPrevJourList' data-day='3' src='"+cheminImage+dataWeather.fcst_day_3.condition_key+".png' title='"+dataWeather.fcst_day_3.condition+"' alt='"+dataWeather.fcst_day_3.condition+"' />");
+        $('#meteoPrevJour3Condition').html("<div class='meteoPrevJourList' data-day='3'>"+dataWeather.fcst_day_3.condition+"</div>");
+        $('#meteoPrevJour3Temp').html("<div class='meteoTempMini meteoPrevJourList' data-day='3'>"+dataWeather.fcst_day_3.tmin + " <span class='meteoUnite meteoPrevJourList' data-day='3'>°C</span></div>  <div class='meteoTempMax meteoPrevJourList' data-day='3'>" + dataWeather.fcst_day_3.tmax + " <span class='meteoUnite meteoPrevJourList' data-day='3'>°C</span></div>");
+        
+        $('#meteoPrevJour4Date').html("<div class='meteoPrevJourDateDivNom meteoPrevJourList' data-day='4'>"+dataWeather.fcst_day_4.day_long+"</div><div class='meteoPrevJourDateDivDate meteoPrevJourList' data-day='4'>"+dataWeather.fcst_day_4.date+"</div>");
+        $('#meteoPrevJour4Icon').html("<img class='meteoPrevJourList' data-day='4' src='"+cheminImage+dataWeather.fcst_day_4.condition_key+".png' title='"+dataWeather.fcst_day_4.condition+"' alt='"+dataWeather.fcst_day_4.condition+"' />");
+        $('#meteoPrevJour4Condition').html("<div class='meteoPrevJourList' data-day='4'>"+dataWeather.fcst_day_4.condition+"</div>");
+        $('#meteoPrevJour4Temp').html("<div class='meteoTempMini meteoPrevJourList' data-day='4'>"+dataWeather.fcst_day_4.tmin + " <span class='meteoUnite meteoPrevJourList' data-day='4'>°C</span></div>  <div class='meteoTempMax meteoPrevJourList' data-day='4'>" + dataWeather.fcst_day_4.tmax + " <span class='meteoUnite meteoPrevJourList' data-day='4'>°C</span></div>");
+		
+		// CHARGEMENT DONNEES PAR HEURES
+		for (let numJour = 0; numJour <= 4; numJour++) {
+		  var dataJour;
+		  switch(numJour) {
+			case 0:	dataJour = dataWeather.fcst_day_0.hourly_data; break;
+			case 1: dataJour = dataWeather.fcst_day_1.hourly_data; break;
+			case 2: dataJour = dataWeather.fcst_day_2.hourly_data; break;
+			case 3: dataJour = dataWeather.fcst_day_3.hourly_data; break;
+			case 4: dataJour = dataWeather.fcst_day_4.hourly_data; break;
+		  }
+		  
+		  var ventVitMoyenne = 0;
+		  var ventDir = "";
+		  var rafaleMax = 0;
+		  var precipitationTotal = 0;
+		  var humiditeMoyenne = 0;
+		  var pressionMoyenne = 0;
+		  
+		  $.each(dataJour, function(hrs, previsions) {
+		    var tabHeures = hrs.split("H");
+		    var heure = (tabHeures[0].length < 2 ? "0"+tabHeures[0] : tabHeures[0]);
+		    $("#"+"meteoPrevJ"+numJour+"HrsCond"+heure).html("<img src='"+cheminImage+previsions.CONDITION_KEY+".png' title='"+previsions.CONDITION+"' alt='"+previsions.CONDITION+"' />");
+		    $("#"+"meteoPrevJ"+numJour+"HrsTempPrev"+heure).html(previsions.TMP2m + " <span class='meteoUniteHeures'>°C</span>");
+		    $("#"+"meteoPrevJ"+numJour+"HrsTempPrev"+heure).css("background-color","var(--temp"+Math.round(previsions.TMP2m)+")");
+		    $("#"+"meteoPrevJ"+numJour+"HrsTempPrev"+heure).css("color","var(--tempFont"+Math.round(previsions.TMP2m)+")");
+		    $("#"+"meteoPrevJ"+numJour+"HrsTempRess"+heure).html((previsions.WNDCHILL2m == null ? "-" : previsions.WNDCHILL2m + " <span class='meteoUniteHeures'>°C</span>"));
+		    $("#"+"meteoPrevJ"+numJour+"HrsTempRess"+heure).css("background-color",(previsions.WNDCHILL2m == null ? "transparent" : "var(--temp"+Math.round(previsions.WNDCHILL2m)+")"));
+		    $("#"+"meteoPrevJ"+numJour+"HrsTempRess"+heure).css("color",(previsions.WNDCHILL2m == null ? "rgb(172,172,172)" : "var(--tempFont"+Math.round(previsions.WNDCHILL2m)+")"));
+		    $("#"+"meteoPrevJ"+numJour+"HrsVent"+heure).html(previsions.WNDSPD10m + " <span class='meteoUniteHeures'>km/h</span>");
+		    $("#"+"meteoPrevJ"+numJour+"HrsVentDir"+heure).html(previsions.WNDDIRCARD10);
+		    $("#"+"meteoPrevJ"+numJour+"HrsRafale"+heure).html(previsions.WNDGUST10m + " <span class='meteoUniteHeures'>km/h</span>");
+		    $("#"+"meteoPrevJ"+numJour+"HrsPrecipt"+heure).html((previsions.APCPsfc == 0 ? "-" : previsions.APCPsfc + " <span class='meteoUniteHeures'>mm</span>"));
+		    $("#"+"meteoPrevJ"+numJour+"HrsHumid"+heure).html(previsions.RH2m + " <span class='meteoUniteHeures'>%</span>");
+		    $("#"+"meteoPrevJ"+numJour+"HrsPression"+heure).html(Math.round(previsions.PRMSL) + " <span class='meteoUniteHeures'>Hpa</span>");
+			
+			ventVitMoyenne = ventVitMoyenne + previsions.WNDSPD10m;
+			switch(tabHeures[0]) {
+			  case "9":	ventDir = previsions.WNDDIRCARD10; break;
+			  case "13": ventDir = ventDir + "-" + previsions.WNDDIRCARD10; break;
+			  case "19": ventDir = ventDir + "-" + previsions.WNDDIRCARD10; break;
+		    }
+			rafaleMax = Math.max(rafaleMax, previsions.WNDGUST10m);
+			precipitationTotal = precipitationTotal + previsions.APCPsfc;
+			humiditeMoyenne = humiditeMoyenne + previsions.RH2m;
+			pressionMoyenne = pressionMoyenne + previsions.PRMSL;
+		  });
+		  ventVitMoyenne = Math.round(ventVitMoyenne / 24);
+		  humiditeMoyenne = Math.round(humiditeMoyenne / 24);
+		  pressionMoyenne = Math.round(pressionMoyenne / 24);
+		  
+		  // CHARGEMENT DONNEES CALCULES POUR LES JOURS
+		  $("#meteoPrevJour"+numJour+"Vent").html(ventVitMoyenne + " <span class='meteoUnite'>km/h</span> - " + ventDir);
+		  $("#meteoPrevJour"+numJour+"Rafale").html(rafaleMax + " <span class='meteoUnite'>km/h</span>");
+		  $("#meteoPrevJour"+numJour+"Precipit").html((Math.round(precipitationTotal * 10) / 10) + " <span class='meteoUnite'>mm</span>");
+		  $("#meteoPrevJour"+numJour+"Humid").html(humiditeMoyenne + " <span class='meteoUnite'>%</span>");
+		  $("#meteoPrevJour"+numJour+"Press").html(pressionMoyenne + " <span class='meteoUnite'>Hpa</span>");
+		}
+
+      });
+	  
+	  $(".meteoPrevJourList").mouseenter(function(){
+		var numJourActif = $(this).attr('data-day');
+        $('td[data-day="'+numJourActif+'"]').addClass("meteoPrevJourListHover");
+      });
+	  $(".meteoPrevJourList").mouseleave(function(){
+		var numJourActif = $(this).attr('data-day');
+		$('td[data-day="'+numJourActif+'"]').removeClass("meteoPrevJourListHover");
+	  });
+	  $('.meteoPrevJourList').click(function() {
+	    var numJourActifPrec = $('td.meteoPrevJourListActif:first').attr('data-day');
+		var taillPrec = $('li[data-day="'+numJourActifPrec+'"]').width();
+		var numJourActif = $(this).attr('data-day');
+		var valTranslation = -(numJourActif * 800);
+        $('.meteoPrevJourList').removeClass("meteoPrevJourListActif");
+		$('.meteoPrevJourList').removeClass("meteoPrevJourListHover");
+        $('td[data-day="'+numJourActif+'"]').addClass("meteoPrevJourListActif");
+		$('.meteoPrevHeuresLiActif').removeClass("meteoPrevHeuresLiActif");
+        $('li[data-day="'+numJourActif+'"]').addClass("meteoPrevHeuresLiActif");
+		$('#meteoPrevisionsHeuresList').css("-webkit-transform","translate("+valTranslation+"px,0)");
+		$('#meteoPrevisionsHeuresList').css("-moz-transform","translate("+valTranslation+"px,0)");
+		$('#meteoPrevisionsHeuresList').css("-ms-transform","translate("+valTranslation+"px,0)");
+		$('#meteoPrevisionsHeuresList').css("-o-transform","translate("+valTranslation+"px,0)");
+		$('#meteoPrevisionsHeuresList').css("transform","translate("+valTranslation+"px,0)");
+	  });
+	  
+	  // PARTIE POUR LE SOLEIL ET LA LUNE
+      var cheminImage = ('#image#' != '#'+'image#') ? "#image#" : "https://www.prevision-meteo.ch/style/images/icon/"; 
+	  
+	  var keyApi = ('#keyAPI#' != '#'+'keyAPI#') ? "#keyAPI#" : ""; 
+	  
+      var urlAstro = "https://api.weatherbit.io/v2.0/forecast/daily?lat="+lat+"&lon="+lon+"&days=5&lang=fr&key="+keyApi;
+	  $.getJSON(urlAstro, function(dataAstro) {
+		
+		$.each(dataAstro, function(key, val) {
+		  if (key == "city_name") {
+		    $('#meteoVilleNom').html(val);
+		  }
+		  if (key == "data") {
+		    $.each(val, function(j, condition) {
+			  var leverSoleil = new Date(condition.sunrise_ts * 1000);
+			  var coucherSoleil = new Date(condition.sunset_ts * 1000);
+			  var leverLune = new Date(condition.moonrise_ts * 1000);
+			  var coucherLune = new Date(condition.moonset_ts * 1000);
+			  $("#"+"meteoPrevJour"+j+"Soleil").html(("0" + leverSoleil.getHours()).slice(-2)+"h"+("0" + leverSoleil.getMinutes()).slice(-2) + " <span id='soleilUVJ"+j+"' class='soleilUV'>UV : " + (Math.round(condition.uv)-1) + "</span> " + ("0" + coucherSoleil.getHours()).slice(-2)+"h"+("0" + coucherSoleil.getMinutes()).slice(-2));
+			  $("#soleilUVJ"+j).css("background-color","var(--uv"+(Math.round(condition.uv)-1)+")");
+			  $("#soleilUVJ"+j).css("color","var(--uvFont"+(Math.round(condition.uv)-1)+")");
+			  $("#"+"meteoPrevJour"+j+"Lune").html(("0" + leverLune.getHours()).slice(-2)+"h"+("0" + leverLune.getMinutes()).slice(-2) + " <img src='"+cheminImage+"lune"+Math.round(condition.moon_phase_lunation * 30)+".png' /> "  + ("0" + coucherLune.getHours()).slice(-2)+"h"+("0" + coucherLune.getMinutes()).slice(-2));
+			});
+		  }
+		});
+	  });
+	  
+    }
+    setInterval(fetch, 3600000);
+    fetch();
+  </script>
+</div>
