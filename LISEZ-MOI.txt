@@ -7,5 +7,6 @@ Pour l'utilisation du widget, il est nécessaire de :
 - Ajouter les options suivantes (bien respecter l'ortographe et la casse) : 
 	* image : chemin où sont stockées les images (exemple : /data/customTemplates/dashboard/METEO/)
 	* keyAPI : clé nécessaire afin de faire fonctionner une partie du widget. Pour ce faire, il est nécessaire de créer un compte et de prendre la clé gratuite sur : https://www.weatherbit.io/
-	* lat : la latitude (en décimale) du lieu pour la maison
-	* lon : la longitude (en décimale) du lieu pour la maison
+	* latitude : la latitude (en décimale) du lieu pour la maison
+	* longitude : la longitude (en décimale) du lieu pour la maison
+	* previsionsHeures : permet d'afficher ou pas le panneau de prévisions des heures (OUI / NON)

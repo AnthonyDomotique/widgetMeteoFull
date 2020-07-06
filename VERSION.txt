@@ -1,1 +1,6 @@
+2020-07-06 - #002.00 : Ajout de fonctionnalités : 
+	* Permet d'afficher ou pas le panneau des prévisions par heures
+	* Mise en forme des températures
+	* Mise en forme direction du vent
+	* Mise en forme des rafales
 2020-07-03 - #001.00 : Mise en production
