@@ -1,6 +1,14 @@
-2020-07-06 - #002.00 : Ajout de fonctionnalités : 
+2020-07-08 - #001.00 : Mise en production
+
+2020-07-08 - #000.03 : Ajout de fonctionnalités : 
+	* Colorisation en dégradé pour l'humidité
+	* Ajout d'options afin de personnalisé le widget (affichage du dégradé de couleurs pour les températures, idem pour les températures ressenties, idem pour les rafales, idem pour l'humidité). Chaque colorisation peut-être activé ou pas de manière indépendante dans les options du widget.
+	* Ajout d'options pour les seuils au niveau du vent et des précipitations
+
+2020-07-06 - #000.02 : Ajout de fonctionnalités : 
 	* Permet d'afficher ou pas le panneau des prévisions par heures
 	* Mise en forme des températures
 	* Mise en forme direction du vent
 	* Mise en forme des rafales
-2020-07-03 - #001.00 : Mise en production
+
+2020-07-03 - #000.01 : Développement

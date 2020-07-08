@@ -885,6 +885,16 @@
   <style>
     /* COULEUR TEMPERATURE */
 	:root {
+		--background-darkTheme: rgb(38,38,38);
+		--background-legacyTheme: rgb(230,230,230);
+		--background-lightTheme: rgb(220,220,220);
+		
+		--borderColor-darkTheme: rgb(55,55,5);
+		--borderColor-legacyTheme: rgb(215,215,215);
+		--borderColor-lightTheme: rgb(215,215,215);
+		
+		--borderColorActive: var(--borderColor-darkTheme);
+		
 		--temp60: rgb(150,20,100);
 		--temp59: rgb(160,20,115);
 		--temp58: rgb(170,20,130);
@@ -1110,6 +1120,48 @@
 		--rafaleFont11: rgb(217,217,217);
 		--rafaleFont12: rgb(217,217,217);
 		--rafaleFont13: rgb(217,217,217);
+		
+		--humidite0: rgb(204,85,50);
+		--humidite5: rgb(204,103,49);
+		--humidite10: rgb(205,120,49);
+		--humidite15: rgb(205,135,50);
+		--humidite20: rgb(204,150,50);
+		--humidite25: rgb(204,163,50);
+		--humidite30: rgb(204,175,50);
+		--humidite35: rgb(204,188,50);
+		--humidite40: rgb(204,200,50);
+		--humidite45: rgb(135,202,50);
+		--humidite50: rgb(67,205,49);
+		--humidite55: rgb(56,207,111);
+		--humidite60: rgb(45,209,174);
+		--humidite65: rgb(44,181,184);
+		--humidite70: rgb(43,154,194);
+		--humidite75: rgb(42,126,203);
+		--humidite80: rgb(41,99,213);
+		--humidite85: rgb(49,81,212);
+		--humidite90: rgb(56,62,211);
+		--humidite95: rgb(64,44,210);
+
+		--humiditeFont0: rgb(217,217,217);
+		--humiditeFont5: rgb(217,217,217);
+		--humiditeFont10: rgb(217,217,217);
+		--humiditeFont15: rgb(217,217,217);
+		--humiditeFont20: rgb(38,38,38);
+		--humiditeFont25: rgb(38,38,38);
+		--humiditeFont30: rgb(38,38,38);
+		--humiditeFont35: rgb(38,38,38);
+		--humiditeFont40: rgb(38,38,38);
+		--humiditeFont45: rgb(38,38,38);
+		--humiditeFont50: rgb(38,38,38);
+		--humiditeFont55: rgb(38,38,38);
+		--humiditeFont60: rgb(38,38,38);
+		--humiditeFont65: rgb(38,38,38);
+		--humiditeFont70: rgb(217,217,217);
+		--humiditeFont75: rgb(217,217,217);
+		--humiditeFont80: rgb(217,217,217);
+		--humiditeFont85: rgb(217,217,217);
+		--humiditeFont90: rgb(217,217,217);
+		--humiditeFont95: rgb(217,217,217);
 
 	}
 	
@@ -1155,8 +1207,12 @@
 	  width: 150px !important;
 	}
 	#meteoPrevInstantTempDiv, 
+	#meteoPrevInstantVentDiv,
 	#meteoPrevInstantRafaleDiv,
-	.meteoPrevJourRafaleDiv {
+	#meteoPrevInstantHumiditeDiv,
+	.meteoPrevJourVentDiv,
+	.meteoPrevJourRafaleDiv,
+	.meteoPrevJourHumidDiv, {
 	  width: 60px;
 	  margin: 0 auto;
 	}
@@ -1209,7 +1265,7 @@
 	  border-bottom: none !important;
 	}
 	.meteoPrevJourDate {
-	  border-bottom: 1px dashed rgb(55,55,55) !important;
+	  border-bottom: 1px dashed var(--borderColorActive) !important;
 	  border-left: 1px solid transparent !important;
 	  border-right: 1px solid transparent !important;
 	}
@@ -1223,13 +1279,13 @@
 	.meteoPrevJourHumid,
 	.meteoPrevJourPress,
 	.meteoPrevJourSoleil	{
-	  border-top: 1px dashed rgb(55,55,55) !important;
-	  border-bottom: 1px dashed rgb(55,55,55) !important;
+	  border-top: 1px dashed var(--borderColorActive) !important;
+	  border-bottom: 1px dashed var(--borderColorActive) !important;
 	  border-left: 1px solid transparent !important;
 	  border-right: 1px solid transparent !important;
 	}
 	.meteoPrevJourLune {
-	  border-top: 1px dashed rgb(55,55,55) !important;
+	  border-top: 1px dashed var(--borderColorActive) !important;
 	  border-left: 1px solid transparent !important;
 	  border-right: 1px solid transparent !important;
 	}
@@ -1239,8 +1295,14 @@
 	.meteoPrevJourSoleil, .meteoPrevJourLune {
 	  font-size: 0.9em !important;
 	}
-	td.meteoPrevJourList:not(meteoPrevJourListActif) {
-	  background-color: rgb(38,38,38);
+	td.meteoPrevJourList-dark:not(meteoPrevJourListActif) {
+	  background-color: var(--background-darkTheme);
+	}
+	td.meteoPrevJourList-legacy:not(meteoPrevJourListActif) {
+	  background-color: var(--background-legacyTheme);
+	}
+	td.meteoPrevJourList-light:not(meteoPrevJourListActif) {
+	  background-color: var(--background-lightTheme);
 	}
 	.meteoPrevJourListActif	{
 	  background-color: transparent !important;
@@ -1311,7 +1373,7 @@
 	.meteoPrevHeuresRafale,
 	.meteoPrevHeuresPrecipt,
 	.meteoPrevHeuresHumid {
-	  border-bottom: 1px dashed rgb(55,55,55) !important;
+	  border-bottom: 1px dashed var(--borderColorActive) !important;
 	}
 	.imgDirVent {
 	  width: 18px;
@@ -1324,11 +1386,27 @@
       var cheminImage = ('#image#' != '#'+'image#') ? "#image#" : "https://www.prevision-meteo.ch/style/images/icon/"; 
       var url = "https://www.prevision-meteo.ch/services/json/lat=" + latitude + "lng=" + longitude;
 	  var previHeures = ('#previsionsHeures#' != '#'+'previsionsHeures#') ? "#previsionsHeures#" : "NON";
+	  var tempCouleur = ('#temperaturesCouleur#' != '#'+'temperaturesCouleur#') ? "#temperaturesCouleur#" : "NON";
+	  var tempRessentieCouleur = ('#temperaturesRessentieCouleur#' != '#'+'temperaturesRessentieCouleur#') ? "#temperaturesRessentieCouleur#" : "NON";
+	  var rafalesCouleur = ('#rafalesCouleur#' != '#'+'rafalesCouleur#') ? "#rafalesCouleur#" : "NON";
+	  var humiditeCouleur = ('#humiditeCouleur#' != '#'+'humiditeCouleur#') ? "#humiditeCouleur#" : "NON";
+	  var seuilVent = ('#seuilVent#' != '#'+'seuilVent#') ? "#seuilVent#" : "200";
+	  var seuilPrecipitations = ('#seuilPrecipitations#' != '#'+'seuilPrecipitations#') ? "#seuilPrecipitations#" : "50";
+	  
+	  if (getComputedStyle(document.documentElement).getPropertyValue("--bg-color") == " 25, 25, 25") {
+	    var theme = "dark";
+	  } else if (getComputedStyle(document.documentElement).getPropertyValue("--bg-color") == " 238, 239, 241") {
+	    var theme = "legacy";
+	  } else if (getComputedStyle(document.documentElement).getPropertyValue("--bg-color") == " 232, 232, 234") {
+	    var theme = "light";
+	  }
+	  document.documentElement.style.setProperty("--borderColorActive", "var(--borderColor-"+theme+"Theme)");
+	  $("td.meteoPrevJourList:not(meteoPrevJourListActif)").addClass("meteoPrevJourList-"+theme);
 	  
 	  // GESTION DES IMAGES FIXES
 	  $("img").each(function(){
 	    if ($(this).attr("data-img") !== undefined) {
-		  $(this).attr("src",cheminImage+$(this).attr("data-img")+".png");
+		  $(this).attr("src",cheminImage+$(this).attr("data-img")+"-"+theme+".png");
 		}
 	  });
 	  
@@ -1341,8 +1419,10 @@
         $('#meteoPrevInstantIcon').html("<img src='"+cheminImage+dataWeather.current_condition.condition_key+".png' title='"+dataWeather.current_condition.condition+"' alt='"+dataWeather.current_condition.condition+"' />");
         $('#meteoPrevInstantCondition').html(dataWeather.current_condition.condition);
         $('#meteoPrevInstantTemp').html("<div id='meteoPrevInstantTempDiv'>" + dataWeather.current_condition.tmp + " <span class='meteoUnite'>°C</span></div>");
-		$('#meteoPrevInstantTempDiv').css("background-color","var(--temp"+Math.round(dataWeather.current_condition.tmp)+")");
-		$('#meteoPrevInstantTempDiv').css("color","var(--tempFont"+Math.round(dataWeather.current_condition.tmp)+")");
+		if (tempCouleur == "OUI") {
+		  $('#meteoPrevInstantTempDiv').css("background-color","var(--temp"+Math.round(dataWeather.current_condition.tmp)+")");
+		  $('#meteoPrevInstantTempDiv').css("color","var(--tempFont"+Math.round(dataWeather.current_condition.tmp)+")");
+		}
 		switch(dataWeather.current_condition.wnd_dir) {
 		  case "N": angleVentCourant = 0; break;
 		  case "NE": angleVentCourant = 45; break;
@@ -1353,73 +1433,142 @@
 		  case "O": angleVentCourant = 270; break;
 		  case "NO": angleVentCourant = 315; break;		  
 		}
-        $('#meteoPrevInstantVent').html(dataWeather.current_condition.wnd_spd + " <span class='meteoUnite'>km/h</span> - <img class='imgDirVent' src='"+cheminImage+"manche-air.png' title='"+dataWeather.current_condition+" ("+angleVentCourant+"°)' alt='"+dataWeather.current_condition+" ("+angleVentCourant+"°)' />");
+        $('#meteoPrevInstantVent').html("<div id='meteoPrevInstantVentDiv'>" + dataWeather.current_condition.wnd_spd + " <span class='meteoUnite'>km/h</span> - <img class='imgDirVent' src='"+cheminImage+"manche-air.png' title='"+dataWeather.current_condition.wnd_dir+" ("+angleVentCourant+"°)' alt='"+dataWeather.current_condition.wnd_dir+" ("+angleVentCourant+"°)' /></div>");
 		$('#meteoPrevInstantVent img').css("transform","rotate("+angleVentCourant+"deg)");
-        $('#meteoPrevInstantRafale').html("<div id='meteoPrevInstantRafaleDiv'>" + dataWeather.current_condition.wnd_gust + " <span class='meteoUnite'>km/h</span></div>");
-		switch(true) {
-		  case (dataWeather.current_condition.wnd_gust < 1): colorRafale = 1; break;
-		  case (dataWeather.current_condition.wnd_gust <= 5): colorRafale = 2; break;
-		  case (dataWeather.current_condition.wnd_gust <= 11): colorRafale = 3; break;
-		  case (dataWeather.current_condition.wnd_gust <= 19): colorRafale = 4; break;
-		  case (dataWeather.current_condition.wnd_gust <= 28): colorRafale = 5; break;
-		  case (dataWeather.current_condition.wnd_gust <= 38): colorRafale = 6; break;
-		  case (dataWeather.current_condition.wnd_gust <= 49): colorRafale = 7; break;
-		  case (dataWeather.current_condition.wnd_gust <= 61): colorRafale = 8; break;
-		  case (dataWeather.current_condition.wnd_gust <= 74): colorRafale = 9; break;
-		  case (dataWeather.current_condition.wnd_gust <= 88): colorRafale = 10; break;
-		  case (dataWeather.current_condition.wnd_gust <= 102): colorRafale = 11; break;
-		  case (dataWeather.current_condition.wnd_gust <= 117): colorRafale = 12; break;
-		  case (dataWeather.current_condition.wnd_gust >= 118): colorRafale = 13; break;
+		if (dataWeather.current_condition.wnd_spd >= seuilVent) {
+		  $('#meteoPrevInstantVent').css("color","rgb(265,69,0)");
 		}
-		$('#meteoPrevInstantRafaleDiv').css("background-color","var(--rafale"+colorRafale+")");
-		$('#meteoPrevInstantRafaleDiv').css("color","var(--rafaleFont"+colorRafale+")");
-        $('#meteoPrevInstantHumidite').html(dataWeather.current_condition.humidity + " <span class='meteoUnite'>%</span>");
+		
+        $('#meteoPrevInstantRafale').html("<div id='meteoPrevInstantRafaleDiv'>" + dataWeather.current_condition.wnd_gust + " <span class='meteoUnite'>km/h</span></div>");
+		if (rafalesCouleur == "OUI") {
+		  switch(true) {
+			case (dataWeather.current_condition.wnd_gust < 1): colorRafale = 1; break;
+			case (dataWeather.current_condition.wnd_gust <= 5): colorRafale = 2; break;
+			case (dataWeather.current_condition.wnd_gust <= 11): colorRafale = 3; break;
+			case (dataWeather.current_condition.wnd_gust <= 19): colorRafale = 4; break;
+			case (dataWeather.current_condition.wnd_gust <= 28): colorRafale = 5; break;
+			case (dataWeather.current_condition.wnd_gust <= 38): colorRafale = 6; break;
+			case (dataWeather.current_condition.wnd_gust <= 49): colorRafale = 7; break;
+			case (dataWeather.current_condition.wnd_gust <= 61): colorRafale = 8; break;
+			case (dataWeather.current_condition.wnd_gust <= 74): colorRafale = 9; break;
+			case (dataWeather.current_condition.wnd_gust <= 88): colorRafale = 10; break;
+			case (dataWeather.current_condition.wnd_gust <= 102): colorRafale = 11; break;
+			case (dataWeather.current_condition.wnd_gust <= 117): colorRafale = 12; break;
+			case (dataWeather.current_condition.wnd_gust >= 118): colorRafale = 13; break;
+		  }
+		  $('#meteoPrevInstantRafaleDiv').css("background-color","var(--rafale"+colorRafale+")");
+		  $('#meteoPrevInstantRafaleDiv').css("color","var(--rafaleFont"+colorRafale+")");
+		}
+		
+        $('#meteoPrevInstantHumidite').html("<div id='meteoPrevInstantHumiditeDiv'>" + dataWeather.current_condition.humidity + " <span class='meteoUnite'>%</span></div>");
+		if (humiditeCouleur == "OUI") {
+		  switch(true) {
+			case (dataWeather.current_condition.humidity < 5): colorHumidite = 0; break;
+			case (dataWeather.current_condition.humidity < 10): colorHumidite = 5; break;
+			case (dataWeather.current_condition.humidity < 15): colorHumidite = 10; break;
+			case (dataWeather.current_condition.humidity < 20): colorHumidite = 15; break;
+			case (dataWeather.current_condition.humidity < 25): colorHumidite = 20; break;
+			case (dataWeather.current_condition.humidity < 30): colorHumidite = 25; break;
+			case (dataWeather.current_condition.humidity < 35): colorHumidite = 30; break;
+			case (dataWeather.current_condition.humidity < 40): colorHumidite = 35; break;
+			case (dataWeather.current_condition.humidity < 45): colorHumidite = 40; break;
+			case (dataWeather.current_condition.humidity < 50): colorHumidite = 45; break;
+			case (dataWeather.current_condition.humidity < 55): colorHumidite = 50; break;
+			case (dataWeather.current_condition.humidity < 60): colorHumidite = 55; break;
+			case (dataWeather.current_condition.humidity < 65): colorHumidite = 60; break;
+			case (dataWeather.current_condition.humidity < 70): colorHumidite = 65; break;
+			case (dataWeather.current_condition.humidity < 75): colorHumidite = 70; break;
+			case (dataWeather.current_condition.humidity < 80): colorHumidite = 75; break;
+			case (dataWeather.current_condition.humidity < 85): colorHumidite = 80; break;
+			case (dataWeather.current_condition.humidity < 90): colorHumidite = 85; break;
+			case (dataWeather.current_condition.humidity < 95): colorHumidite = 90; break;
+			case (dataWeather.current_condition.humidity >= 65): colorHumidite = 95; break;
+		  }
+		  $('#meteoPrevInstantHumiditeDiv').css("background-color","var(--humidite"+colorHumidite+")");
+		  $('#meteoPrevInstantHumiditeDiv').css("color","var(--humiditeFont"+colorHumidite+")");
+		}
+		
         $('#meteoPrevInstantPression').html(Math.round(dataWeather.current_condition.pressure) + " <span class='meteoUnite'>Hpa</span>");
 		
         $('#meteoPrevJour0Date').html("<div class='meteoPrevJourDateDivNom meteoPrevJourList' data-day='0'>"+dataWeather.fcst_day_0.day_long+"</div><div class='meteoPrevJourDateDivDate meteoPrevJourList' data-day='0'>Aujourd'hui</div>");        
         $('#meteoPrevJour0Icon').html("<img class='meteoPrevJourList' data-day='0' src='"+cheminImage+dataWeather.fcst_day_0.condition_key+".png' title='"+dataWeather.fcst_day_0.condition+"' alt='"+dataWeather.fcst_day_0.condition+"' />");
         $('#meteoPrevJour0Condition').html("<div class='meteoPrevJourList' data-day='0'>"+dataWeather.fcst_day_0.condition+"</div>");
         $('#meteoPrevJour0Temp').html("<div id='meteoJour0TempMini' class='meteoTempMini meteoPrevJourList' data-day='0'>"+dataWeather.fcst_day_0.tmin + " <span class='meteoUnite meteoPrevJourList' data-day='0'>°C</span></div>  <div id='meteoJour0TempMax' class='meteoTempMax meteoPrevJourList' data-day='0'>" + dataWeather.fcst_day_0.tmax + " <span class='meteoUnite meteoPrevJourList' data-day='0'>°C</span></div>");
-		$('#meteoJour0TempMini').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_0.tmin)+")");
-		$('#meteoJour0TempMini').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_0.tmin)+")");
-		$('#meteoJour0TempMax').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_0.tmax)+")");
-		$('#meteoJour0TempMax').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_0.tmax)+")");
+		if (tempCouleur == "OUI") {
+		  $('#meteoJour0TempMini').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_0.tmin)+")");
+		  $('#meteoJour0TempMini').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_0.tmin)+")");
+		  $('#meteoJour0TempMax').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_0.tmax)+")");
+		  $('#meteoJour0TempMax').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_0.tmax)+")");
+		} else {
+		  $('#meteoJour0TempMini').css("background-color","#0000a0");
+		  $('#meteoJour0TempMini').css("color","#ffffff");
+		  $('#meteoJour0TempMax').css("background-color","#a00000");
+		  $('#meteoJour0TempMax').css("color","#ffffff");
+		}
         
         $('#meteoPrevJour1Date').html("<div class='meteoPrevJourDateDivNom meteoPrevJourList' data-day='1'>"+dataWeather.fcst_day_1.day_long+"</div><div class='meteoPrevJourDateDivDate meteoPrevJourList' data-day='1'>Demain</div>");
         $('#meteoPrevJour1Icon').html("<img class='meteoPrevJourList' data-day='1' src='"+cheminImage+dataWeather.fcst_day_1.condition_key+".png' title='"+dataWeather.fcst_day_1.condition+"' alt='"+dataWeather.fcst_day_1.condition+"' />");
         $('#meteoPrevJour1Condition').html("<div class='meteoPrevJourList' data-day='1'>"+dataWeather.fcst_day_1.condition+"</div>");
         $('#meteoPrevJour1Temp').html("<div id='meteoJour1TempMini' class='meteoTempMini meteoPrevJourList' data-day='1'>"+dataWeather.fcst_day_1.tmin + " <span class='meteoUnite meteoPrevJourList' data-day='1'>°C</span></div>  <div id='meteoJour1TempMax' class='meteoTempMax meteoPrevJourList' data-day='1'>" + dataWeather.fcst_day_1.tmax + " <span class='meteoUnite meteoPrevJourList' data-day='1'>°C</span></div>");
-		$('#meteoJour1TempMini').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_1.tmin)+")");
-		$('#meteoJour1TempMini').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_1.tmin)+")");
-		$('#meteoJour1TempMax').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_1.tmax)+")");
-		$('#meteoJour1TempMax').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_1.tmax)+")");
+		if (tempCouleur == "OUI") {
+		  $('#meteoJour1TempMini').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_1.tmin)+")");
+		  $('#meteoJour1TempMini').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_1.tmin)+")");
+		  $('#meteoJour1TempMax').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_1.tmax)+")");
+		  $('#meteoJour1TempMax').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_1.tmax)+")");
+		} else {
+		  $('#meteoJour1TempMini').css("background-color","#0000a0");
+		  $('#meteoJour1TempMini').css("color","#ffffff");
+		  $('#meteoJour1TempMax').css("background-color","#a00000");
+		  $('#meteoJour1TempMax').css("color","#ffffff");
+		}
         
         $('#meteoPrevJour2Date').html("<div class='meteoPrevJourDateDivNom meteoPrevJourList' data-day='2'>"+dataWeather.fcst_day_2.day_long+"</div><div class='meteoPrevJourDateDivDate meteoPrevJourList' data-day='2'>"+dataWeather.fcst_day_2.date+"</div>");
         $('#meteoPrevJour2Icon').html("<img class='meteoPrevJourList' data-day='2' src='"+cheminImage+dataWeather.fcst_day_2.condition_key+".png' title='"+dataWeather.fcst_day_2.condition+"' alt='"+dataWeather.fcst_day_2.condition+"' />");
         $('#meteoPrevJour2Condition').html("<div class='meteoPrevJourList' data-day='2'>"+dataWeather.fcst_day_2.condition+"</div>");
         $('#meteoPrevJour2Temp').html("<div id='meteoJour2TempMini' class='meteoTempMini meteoPrevJourList' data-day='2'>"+dataWeather.fcst_day_2.tmin + " <span class='meteoUnite meteoPrevJourList' data-day='2'>°C</span></div>  <div id='meteoJour2TempMax' class='meteoTempMax meteoPrevJourList' data-day='2'>" + dataWeather.fcst_day_2.tmax + " <span class='meteoUnite meteoPrevJourList' data-day='2'>°C</span></div>");
-		$('#meteoJour2TempMini').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_2.tmin)+")");
-		$('#meteoJour2TempMini').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_2.tmin)+")");
-		$('#meteoJour2TempMax').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_2.tmax)+")");
-		$('#meteoJour2TempMax').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_2.tmax)+")");
+		if (tempCouleur == "OUI") {
+		  $('#meteoJour2TempMini').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_2.tmin)+")");
+		  $('#meteoJour2TempMini').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_2.tmin)+")");
+		  $('#meteoJour2TempMax').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_2.tmax)+")");
+		  $('#meteoJour2TempMax').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_2.tmax)+")");
+		} else {
+		  $('#meteoJour2TempMini').css("background-color","#0000a0");
+		  $('#meteoJour2TempMini').css("color","#ffffff");
+		  $('#meteoJour2TempMax').css("background-color","#a00000");
+		  $('#meteoJour2TempMax').css("color","#ffffff");
+		}
         
         $('#meteoPrevJour3Date').html("<div class='meteoPrevJourDateDivNom meteoPrevJourList' data-day='3'>"+dataWeather.fcst_day_3.day_long+"</div><div class='meteoPrevJourDateDivDate meteoPrevJourList' data-day='3'>"+dataWeather.fcst_day_3.date+"</div>");
         $('#meteoPrevJour3Icon').html("<img class='meteoPrevJourList' data-day='3' src='"+cheminImage+dataWeather.fcst_day_3.condition_key+".png' title='"+dataWeather.fcst_day_3.condition+"' alt='"+dataWeather.fcst_day_3.condition+"' />");
         $('#meteoPrevJour3Condition').html("<div class='meteoPrevJourList' data-day='3'>"+dataWeather.fcst_day_3.condition+"</div>");
         $('#meteoPrevJour3Temp').html("<div id='meteoJour3TempMini' class='meteoTempMini meteoPrevJourList' data-day='3'>"+dataWeather.fcst_day_3.tmin + " <span class='meteoUnite meteoPrevJourList' data-day='3'>°C</span></div>  <div id='meteoJour3TempMax' class='meteoTempMax meteoPrevJourList' data-day='3'>" + dataWeather.fcst_day_3.tmax + " <span class='meteoUnite meteoPrevJourList' data-day='3'>°C</span></div>");
-		$('#meteoJour3TempMini').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_3.tmin)+")");
-		$('#meteoJour3TempMini').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_3.tmin)+")");
-		$('#meteoJour3TempMax').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_3.tmax)+")");
-		$('#meteoJour3TempMax').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_3.tmax)+")");
+		if (tempCouleur == "OUI") {
+		  $('#meteoJour3TempMini').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_3.tmin)+")");
+		  $('#meteoJour3TempMini').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_3.tmin)+")");
+		  $('#meteoJour3TempMax').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_3.tmax)+")");
+		  $('#meteoJour3TempMax').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_3.tmax)+")");
+		} else {
+		  $('#meteoJour3TempMini').css("background-color","#0000a0");
+		  $('#meteoJour3TempMini').css("color","#ffffff");
+		  $('#meteoJour3TempMax').css("background-color","#a00000");
+		  $('#meteoJour3TempMax').css("color","#ffffff");
+		}
         
         $('#meteoPrevJour4Date').html("<div class='meteoPrevJourDateDivNom meteoPrevJourList' data-day='4'>"+dataWeather.fcst_day_4.day_long+"</div><div class='meteoPrevJourDateDivDate meteoPrevJourList' data-day='4'>"+dataWeather.fcst_day_4.date+"</div>");
         $('#meteoPrevJour4Icon').html("<img class='meteoPrevJourList' data-day='4' src='"+cheminImage+dataWeather.fcst_day_4.condition_key+".png' title='"+dataWeather.fcst_day_4.condition+"' alt='"+dataWeather.fcst_day_4.condition+"' />");
         $('#meteoPrevJour4Condition').html("<div class='meteoPrevJourList' data-day='4'>"+dataWeather.fcst_day_4.condition+"</div>");
         $('#meteoPrevJour4Temp').html("<div id='meteoJour4TempMini' class='meteoTempMini meteoPrevJourList' data-day='4'>"+dataWeather.fcst_day_4.tmin + " <span class='meteoUnite meteoPrevJourList' data-day='4'>°C</span></div>  <div id='meteoJour4TempMax' class='meteoTempMax meteoPrevJourList' data-day='4'>" + dataWeather.fcst_day_4.tmax + " <span class='meteoUnite meteoPrevJourList' data-day='4'>°C</span></div>");
-		$('#meteoJour4TempMini').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_4.tmin)+")");
-		$('#meteoJour4TempMini').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_4.tmin)+")");
-		$('#meteoJour4TempMax').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_4.tmax)+")");
-		$('#meteoJour4TempMax').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_4.tmax)+")");
+		if (tempCouleur == "OUI") {
+		  $('#meteoJour4TempMini').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_4.tmin)+")");
+		  $('#meteoJour4TempMini').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_4.tmin)+")");
+		  $('#meteoJour4TempMax').css("background-color","var(--temp"+Math.round(dataWeather.fcst_day_4.tmax)+")");
+		  $('#meteoJour4TempMax').css("color","var(--tempFont"+Math.round(dataWeather.fcst_day_4.tmax)+")");
+		} else {
+		  $('#meteoJour4TempMini').css("background-color","#0000a0");
+		  $('#meteoJour4TempMini').css("color","#ffffff");
+		  $('#meteoJour4TempMax').css("background-color","#a00000");
+		  $('#meteoJour4TempMax').css("color","#ffffff");
+		}
 		
 		// CHARGEMENT DONNEES PAR HEURES
 		for (let numJour = 0; numJour <= 4; numJour++) {
@@ -1444,34 +1593,77 @@
 		    var heure = (tabHeures[0].length < 2 ? "0"+tabHeures[0] : tabHeures[0]);
 		    $("#"+"meteoPrevJ"+numJour+"HrsCond"+heure).html("<img src='"+cheminImage+previsions.CONDITION_KEY+".png' title='"+previsions.CONDITION+"' alt='"+previsions.CONDITION+"' />");
 		    $("#"+"meteoPrevJ"+numJour+"HrsTempPrev"+heure).html(previsions.TMP2m + " <span class='meteoUniteHeures'>°C</span>");
-		    $("#"+"meteoPrevJ"+numJour+"HrsTempPrev"+heure).css("background-color","var(--temp"+Math.round(previsions.TMP2m)+")");
-		    $("#"+"meteoPrevJ"+numJour+"HrsTempPrev"+heure).css("color","var(--tempFont"+Math.round(previsions.TMP2m)+")");
-		    $("#"+"meteoPrevJ"+numJour+"HrsTempRess"+heure).html((previsions.WNDCHILL2m == null ? "-" : previsions.WNDCHILL2m + " <span class='meteoUniteHeures'>°C</span>"));
-		    $("#"+"meteoPrevJ"+numJour+"HrsTempRess"+heure).css("background-color",(previsions.WNDCHILL2m == null ? "transparent" : "var(--temp"+Math.round(previsions.WNDCHILL2m)+")"));
-		    $("#"+"meteoPrevJ"+numJour+"HrsTempRess"+heure).css("color",(previsions.WNDCHILL2m == null ? "rgb(172,172,172)" : "var(--tempFont"+Math.round(previsions.WNDCHILL2m)+")"));
-		    $("#"+"meteoPrevJ"+numJour+"HrsVent"+heure).html(previsions.WNDSPD10m + " <span class='meteoUniteHeures'>km/h</span>");
+			if (tempCouleur == "OUI") {
+		      $("#"+"meteoPrevJ"+numJour+"HrsTempPrev"+heure).css("background-color","var(--temp"+Math.round(previsions.TMP2m)+")");
+		      $("#"+"meteoPrevJ"+numJour+"HrsTempPrev"+heure).css("color","var(--tempFont"+Math.round(previsions.TMP2m)+")");
+			}
+		    $("#"+"meteoPrevJ"+numJour+"HrsTempRess"+heure).html((previsions.WNDCHILL2m == null ? (previsions.HUMIDEX == null ? "-" : previsions.HUMIDEX) : previsions.WNDCHILL2m) + " <span class='meteoUniteHeures'>°C</span>");
+			if (tempRessentieCouleur == "OUI") {
+		      $("#"+"meteoPrevJ"+numJour+"HrsTempRess"+heure).css("background-color",(previsions.WNDCHILL2m == null ? (previsions.HUMIDEX == null ? "transparent" : "var(--temp"+Math.round(previsions.HUMIDEX)+")") : "var(--temp"+Math.round(previsions.WNDCHILL2m)+")"));
+		      $("#"+"meteoPrevJ"+numJour+"HrsTempRess"+heure).css("color",(previsions.WNDCHILL2m == null ? (previsions.HUMIDEX == null ? "rgb(172,172,172)" : "var(--tempFont"+Math.round(previsions.HUMIDEX)+")") : "var(--tempFont"+Math.round(previsions.WNDCHILL2m)+")"));
+			}
+		    $("#"+"meteoPrevJ"+numJour+"HrsVent"+heure).html("<div id='meteoPrevJ"+numJour+"HrsVent"+heure+"Div'>" + previsions.WNDSPD10m + " <span class='meteoUniteHeures'>km/h</span></div>");
 		    $("#"+"meteoPrevJ"+numJour+"HrsVentDir"+heure).html("<img class='imgDirVent' src='"+cheminImage+"manche-air.png' title='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' alt='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' />");
 			$("#"+"meteoPrevJ"+numJour+"HrsVentDir"+heure+" img").css("transform","rotate("+previsions.WNDDIR10m+"deg)");
+			if (previsions.WNDSPD10m >= seuilVent) {
+			  $("#meteoPrevJ"+numJour+"HrsVent"+heure+"Div").css("color","rgb(265,69,0)");
+			}
+		
 		    $("#"+"meteoPrevJ"+numJour+"HrsRafale"+heure).html("<div id='meteoPrevJ"+numJour+"HrsRafale"+heure+"Div'>" + previsions.WNDGUST10m + " <span class='meteoUniteHeures'>km/h</span></div>");
-			switch(true) {
-			  case (previsions.WNDGUST10m < 1): colorRafale = 1; break;
-			  case (previsions.WNDGUST10m <= 5): colorRafale = 2; break;
-			  case (previsions.WNDGUST10m <= 11): colorRafale = 3; break;
-			  case (previsions.WNDGUST10m <= 19): colorRafale = 4; break;
-			  case (previsions.WNDGUST10m <= 28): colorRafale = 5; break;
-			  case (previsions.WNDGUST10m <= 38): colorRafale = 6; break;
-			  case (previsions.WNDGUST10m <= 49): colorRafale = 7; break;
-			  case (previsions.WNDGUST10m <= 61): colorRafale = 8; break;
-			  case (previsions.WNDGUST10m <= 74): colorRafale = 9; break;
-			  case (previsions.WNDGUST10m <= 88): colorRafale = 10; break;
-			  case (previsions.WNDGUST10m <= 102): colorRafale = 11; break;
-			  case (previsions.WNDGUST10m <= 117): colorRafale = 12; break;
-			  case (previsions.WNDGUST10m >= 118): colorRafale = 13; break;
-		    }
-			$("#"+"meteoPrevJ"+numJour+"HrsRafale"+heure+"Div").css("background-color","var(--rafale"+colorRafale+")");
-			$("#"+"meteoPrevJ"+numJour+"HrsRafale"+heure+"Div").css("color","var(--rafaleFont"+colorRafale+")");
-		    $("#"+"meteoPrevJ"+numJour+"HrsPrecipt"+heure).html((previsions.APCPsfc == 0 ? "-" : previsions.APCPsfc + " <span class='meteoUniteHeures'>mm</span>"));
-		    $("#"+"meteoPrevJ"+numJour+"HrsHumid"+heure).html(previsions.RH2m + " <span class='meteoUniteHeures'>%</span>");
+			if (rafalesCouleur == "OUI") {
+		      switch(true) {
+			    case (previsions.WNDGUST10m < 1): colorRafale = 1; break;
+			    case (previsions.WNDGUST10m <= 5): colorRafale = 2; break;
+			    case (previsions.WNDGUST10m <= 11): colorRafale = 3; break;
+			    case (previsions.WNDGUST10m <= 19): colorRafale = 4; break;
+			    case (previsions.WNDGUST10m <= 28): colorRafale = 5; break;
+			    case (previsions.WNDGUST10m <= 38): colorRafale = 6; break;
+			    case (previsions.WNDGUST10m <= 49): colorRafale = 7; break;
+			    case (previsions.WNDGUST10m <= 61): colorRafale = 8; break;
+			    case (previsions.WNDGUST10m <= 74): colorRafale = 9; break;
+			    case (previsions.WNDGUST10m <= 88): colorRafale = 10; break;
+			    case (previsions.WNDGUST10m <= 102): colorRafale = 11; break;
+			    case (previsions.WNDGUST10m <= 117): colorRafale = 12; break;
+			    case (previsions.WNDGUST10m >= 118): colorRafale = 13; break;
+		      }
+			  $("#"+"meteoPrevJ"+numJour+"HrsRafale"+heure+"Div").css("background-color","var(--rafale"+colorRafale+")");
+			  $("#"+"meteoPrevJ"+numJour+"HrsRafale"+heure+"Div").css("color","var(--rafaleFont"+colorRafale+")");
+			}			
+			
+		    $("#"+"meteoPrevJ"+numJour+"HrsPrecipt"+heure).html((previsions.APCPsfc == 0 ? "-" : "<div id='meteoPrevJ"+numJour+"HrsPrecipt"+heure+"Div'>" + previsions.APCPsfc + " <span class='meteoUniteHeures'>mm</span></div>"));
+			if (previsions.APCPsfc >= seuilPrecipitations) {
+			  $("#meteoPrevJ"+numJour+"HrsPrecipt"+heure+"Div").css("color","rgb(0,191,255)");
+			}
+			
+		    $("#"+"meteoPrevJ"+numJour+"HrsHumid"+heure).html("<div id='meteoPrevJ"+numJour+"HrsHumid"+heure+"Div'>" + previsions.RH2m + " <span class='meteoUniteHeures'>%</span></div>");
+			if (humiditeCouleur == "OUI") {
+		      switch(true) {
+			    case (previsions.RH2m < 5): colorHumidite = 0; break;
+			    case (previsions.RH2m < 10): colorHumidite = 5; break;
+			    case (previsions.RH2m < 15): colorHumidite = 10; break;
+			    case (previsions.RH2m < 20): colorHumidite = 15; break;
+			    case (previsions.RH2m < 25): colorHumidite = 20; break;
+			    case (previsions.RH2m < 30): colorHumidite = 25; break;
+			    case (previsions.RH2m < 35): colorHumidite = 30; break;
+			    case (previsions.RH2m < 40): colorHumidite = 35; break;
+			    case (previsions.RH2m < 45): colorHumidite = 40; break;
+			    case (previsions.RH2m < 50): colorHumidite = 45; break;
+			    case (previsions.RH2m < 55): colorHumidite = 50; break;
+			    case (previsions.RH2m < 60): colorHumidite = 55; break;
+			    case (previsions.RH2m < 65): colorHumidite = 60; break;
+			    case (previsions.RH2m < 70): colorHumidite = 65; break;
+			    case (previsions.RH2m < 75): colorHumidite = 70; break;
+			    case (previsions.RH2m < 80): colorHumidite = 75; break;
+			    case (previsions.RH2m < 85): colorHumidite = 80; break;
+			    case (previsions.RH2m < 90): colorHumidite = 85; break;
+			    case (previsions.RH2m < 95): colorHumidite = 90; break;
+			    case (previsions.RH2m >= 65): colorHumidite = 95; break;
+			  }
+			  $("#"+"meteoPrevJ"+numJour+"HrsHumid"+heure+"Div").css("background-color","var(--humidite"+colorHumidite+")");
+			  $("#"+"meteoPrevJ"+numJour+"HrsHumid"+heure+"Div").css("color","var(--humiditeFont"+colorHumidite+")");
+			}			
+			
+			
 		    $("#"+"meteoPrevJ"+numJour+"HrsPression"+heure).html(Math.round(previsions.PRMSL) + " <span class='meteoUniteHeures'>Hpa</span>");
 			
 			ventVitMoyenne = ventVitMoyenne + previsions.WNDSPD10m;
@@ -1499,30 +1691,67 @@
 		  pressionMoyenne = Math.round(pressionMoyenne / 24);
 		  
 		  // CHARGEMENT DONNEES CALCULES POUR LES JOURS
-		  $("#meteoPrevJour"+numJour+"Vent").html(ventVitMoyenne + " <span class='meteoUnite'>km/h</span> - " + ventDir);
+		  $("#meteoPrevJour"+numJour+"Vent").html("<div id='meteoPrevJour"+numJour+"VentDiv' class='meteoPrevJourVentDiv'>" + ventVitMoyenne + " <span class='meteoUnite'>km/h</span> - " + ventDir + "</div>");
 		  $("#"+"imgJ"+numJour+"hr09DirVent").css("transform","rotate("+degreRotation09+"deg)");
 		  $("#"+"imgJ"+numJour+"hr13DirVent").css("transform","rotate("+degreRotation13+"deg)");
 		  $("#"+"imgJ"+numJour+"hr19DirVent").css("transform","rotate("+degreRotation19+"deg)");
-		  $("#meteoPrevJour"+numJour+"Rafale").html("<div id='meteoPrevJour"+numJour+"RafaleDiv' class='meteoPrevJourRafaleDiv'>" + rafaleMax + " <span class='meteoUnite'>km/h</span></div>");
-		  switch(true) {
-		    case (rafaleMax < 1): colorRafale = 1; break;
-		    case (rafaleMax <= 5): colorRafale = 2; break;
-		    case (rafaleMax <= 11): colorRafale = 3; break;
-		    case (rafaleMax <= 19): colorRafale = 4; break;
-		    case (rafaleMax <= 28): colorRafale = 5; break;
-		    case (rafaleMax <= 38): colorRafale = 6; break;
-		    case (rafaleMax <= 49): colorRafale = 7; break;
-		    case (rafaleMax <= 61): colorRafale = 8; break;
-		    case (rafaleMax <= 74): colorRafale = 9; break;
-		    case (rafaleMax <= 88): colorRafale = 10; break;
-		    case (rafaleMax <= 102): colorRafale = 11; break;
-		    case (rafaleMax <= 117): colorRafale = 12; break;
-		    case (rafaleMax >= 118): colorRafale = 13; break;
+		  if (ventVitMoyenne >= seuilVent) {
+			$("#meteoPrevJour"+numJour+"VentDiv").css("color","rgb(265,69,0)");
 		  }
-		  $("#meteoPrevJour"+numJour+"RafaleDiv").css("background-color","var(--rafale"+colorRafale+")");
-		  $("#meteoPrevJour"+numJour+"RafaleDiv").css("color","var(--rafaleFont"+colorRafale+")");
-		  $("#meteoPrevJour"+numJour+"Precipit").html((Math.round(precipitationTotal * 10) / 10) + " <span class='meteoUnite'>mm</span>");
-		  $("#meteoPrevJour"+numJour+"Humid").html(humiditeMoyenne + " <span class='meteoUnite'>%</span>");
+		  
+		  $("#meteoPrevJour"+numJour+"Rafale").html("<div id='meteoPrevJour"+numJour+"RafaleDiv' class='meteoPrevJourRafaleDiv'>" + rafaleMax + " <span class='meteoUnite'>km/h</span></div>");
+		  if (rafalesCouleur == "OUI") {
+		    switch(true) {
+		      case (rafaleMax < 1): colorRafale = 1; break;
+		      case (rafaleMax <= 5): colorRafale = 2; break;
+		      case (rafaleMax <= 11): colorRafale = 3; break;
+		      case (rafaleMax <= 19): colorRafale = 4; break;
+		      case (rafaleMax <= 28): colorRafale = 5; break;
+		      case (rafaleMax <= 38): colorRafale = 6; break;
+		      case (rafaleMax <= 49): colorRafale = 7; break;
+		      case (rafaleMax <= 61): colorRafale = 8; break;
+		      case (rafaleMax <= 74): colorRafale = 9; break;
+		      case (rafaleMax <= 88): colorRafale = 10; break;
+		      case (rafaleMax <= 102): colorRafale = 11; break;
+		      case (rafaleMax <= 117): colorRafale = 12; break;
+		      case (rafaleMax >= 118): colorRafale = 13; break;
+		    }
+		    $("#meteoPrevJour"+numJour+"RafaleDiv").css("background-color","var(--rafale"+colorRafale+")");
+		    $("#meteoPrevJour"+numJour+"RafaleDiv").css("color","var(--rafaleFont"+colorRafale+")");
+		  }
+		  
+		  $("#meteoPrevJour"+numJour+"Precipit").html("<div id='meteoPrevJour"+numJour+"PrecipitDiv' class='meteoPrevJourPrecipitDiv'>" + (Math.round(precipitationTotal * 10) / 10) + " <span class='meteoUnite'>mm</span></div>");
+		  if (precipitationTotal >= seuilPrecipitations) {
+			$("#meteoPrevJour"+numJour+"PrecipitDiv").css("color","rgb(0,191,255)");
+		  }
+			
+		  $("#meteoPrevJour"+numJour+"Humid").html("<div id='meteoPrevJour"+numJour+"HumidDiv' class='meteoPrevJourHumidDiv'>" + humiditeMoyenne + " <span class='meteoUnite'>%</span></div>");
+		  if (humiditeCouleur == "OUI") {
+			switch(true) {
+		      case (humiditeMoyenne < 5): colorHumidite = 0; break;
+		      case (humiditeMoyenne < 10): colorHumidite = 5; break;
+		      case (humiditeMoyenne < 15): colorHumidite = 10; break;
+		      case (humiditeMoyenne < 20): colorHumidite = 15; break;
+		      case (humiditeMoyenne < 25): colorHumidite = 20; break;
+		      case (humiditeMoyenne < 30): colorHumidite = 25; break;
+              case (humiditeMoyenne < 35): colorHumidite = 30; break;
+		      case (humiditeMoyenne < 40): colorHumidite = 35; break;
+		      case (humiditeMoyenne < 45): colorHumidite = 40; break;
+		      case (humiditeMoyenne < 50): colorHumidite = 45; break;
+		      case (humiditeMoyenne < 55): colorHumidite = 50; break;
+		      case (humiditeMoyenne < 60): colorHumidite = 55; break;
+		      case (humiditeMoyenne < 65): colorHumidite = 60; break;
+		      case (humiditeMoyenne < 70): colorHumidite = 65; break;
+		      case (humiditeMoyenne < 75): colorHumidite = 70; break;
+		      case (humiditeMoyenne < 80): colorHumidite = 75; break;
+		      case (humiditeMoyenne < 85): colorHumidite = 80; break;
+		      case (humiditeMoyenne < 90): colorHumidite = 85; break;
+		      case (humiditeMoyenne < 95): colorHumidite = 90; break;
+		      case (humiditeMoyenne >= 65): colorHumidite = 95; break;
+		    }
+		    $("#"+"meteoPrevJour"+numJour+"HumidDiv").css("background-color","var(--humidite"+colorHumidite+")");
+		    $("#"+"meteoPrevJour"+numJour+"HumidDiv").css("color","var(--humiditeFont"+colorHumidite+")");
+		  }
 		  $("#meteoPrevJour"+numJour+"Press").html(pressionMoyenne + " <span class='meteoUnite'>Hpa</span>");
 		}
 
@@ -1559,6 +1788,7 @@
 	    $("#meteoPrevisionsHeures").remove();	
 		$('.meteoPrevJourList').removeClass("meteoPrevJourListActif");
 	  } else {
+	    $('.meteoPrevHeuresLi:not(.meteoPrevHeuresLiActif)').css("opacity",0.0);
 	    $(".meteoPrevJourList").mouseenter(function(){
 		  var numJourActif = $(this).attr('data-day');
           $('td[data-day="'+numJourActif+'"]').addClass("meteoPrevJourListHover");
@@ -1574,14 +1804,18 @@
 		  var valTranslation = -(numJourActif * 800);
 		  $('.meteoPrevJourList').removeClass("meteoPrevJourListActif");
 		  $('.meteoPrevJourList').removeClass("meteoPrevJourListHover");
+	      $("td.meteoPrevJourList").removeClass("meteoPrevJourList-"+theme);
 		  $('td[data-day="'+numJourActif+'"]').addClass("meteoPrevJourListActif");
 		  $('.meteoPrevHeuresLiActif').removeClass("meteoPrevHeuresLiActif");
 		  $('li[data-day="'+numJourActif+'"]').addClass("meteoPrevHeuresLiActif");
+	      $("td.meteoPrevJourList:not(meteoPrevJourListActif)").addClass("meteoPrevJourList-"+theme);
 		  $('#meteoPrevisionsHeuresList').css("-webkit-transform","translate("+valTranslation+"px,0)");
 		  $('#meteoPrevisionsHeuresList').css("-moz-transform","translate("+valTranslation+"px,0)");
 		  $('#meteoPrevisionsHeuresList').css("-ms-transform","translate("+valTranslation+"px,0)");
 		  $('#meteoPrevisionsHeuresList').css("-o-transform","translate("+valTranslation+"px,0)");
 		  $('#meteoPrevisionsHeuresList').css("transform","translate("+valTranslation+"px,0)");
+		  $('.meteoPrevHeuresLi:not(.meteoPrevHeuresLiActif)').animate({opacity: 0.0}, 300);
+		  $('.meteoPrevHeuresLiActif').animate({opacity: 1.0}, 300);
 	    });
 	  }
 	  
