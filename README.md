@@ -1,6 +1,6 @@
 Bonjour et merci pour l'intérêt porté à mon widget MeteoFull. Il est disponible en utilisation privée, personnelle, ... Bref faites-vous plaisir. 
 
-Le widget permet d'obtenir une météo sur 5 jours, mais également heures par heures. De plus vous pouvez le personnaliser. En effet, plusieurs options vous permettrons de le modifier comme bon vous semble.**
+Le widget permet d'obtenir une météo sur 5 jours, mais également heures par heures. De plus vous pouvez le personnaliser. En effet, plusieurs options vous permettrons de le modifier comme bon vous semble.
  
 * Affichage ou pas d'un dégradé pour la température comme pour la température ressentie
 * Affichage ou pas d'un dégradé pour les rafales, l'humidité
