@@ -1,10 +1,19 @@
-Pour l'utilisation du widget, il est nécessaire de : 
+Bonjour et merci pour l'intérêt porté à mon widget MeteoFull. Il est disponible en utilisation privée, personnelle, ... Bref faites-vous plaisir. 
 
-- Créer un widget (ou importer le widget) dans Jeedom
-- Copier les images si vous le souhaitez
-- Créer un virtuel avec une commande de type information et de type autre ainsi que décocher l'historisation de la commande
-- Affecter à cette commande le widget MeteoFull
-- Ajouter les options suivantes (bien respecter l'ortographe et la casse) : 
+Le widget permet d'obtenir une météo sur 5 jours, mais également heures par heures. De plus vous pouvez le personnaliser. En effet, plusieurs options vous permettrons de le modifier comme bon vous semble.**
+ 
+* Affichage ou pas d'un dégradé pour la température comme pour la température ressentie
+* Affichage ou pas d'un dégradé pour les rafales, l'humidité
+* Affichage d'un seuil pour le vent, les précipitations afin de visualiser les moments où il y a un risque de dépasser le seuil
+* Gestion des différents thèmes sur Jeedom.
+
+Pour l'utilisation du widget, il est nécessaire de :
+
+* Créer un widget (ou importer le widget) dans Jeedom
+* Copier les images si vous le souhaitez
+* Créer un virtuel avec une commande de type information et de type autre ainsi que décocher l'historisation de la commande
+* Affecter à cette commande le widget MeteoFull
+* Ajouter les options suivantes (bien respecter l'ortographe et la casse) : 
 	* image : chemin où sont stockées les images (exemple : /data/customTemplates/dashboard/METEO/) (Par défaut icone du site https://www.prevision-meteo.ch)
 	* keyAPI : clé nécessaire afin de faire fonctionner une partie du widget. Pour ce faire, il est nécessaire de créer un compte et de prendre la clé gratuite sur : https://www.weatherbit.io/
 	* latitude : la latitude (en décimale) du lieu pour la maison (Par défaut Paris)
