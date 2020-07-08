@@ -6,6 +6,7 @@ Le widget permet d'obtenir une météo sur 5 jours, mais également heures par h
 * Affichage ou pas d'un dégradé pour les rafales, l'humidité
 * Affichage d'un seuil pour le vent, les précipitations afin de visualiser les moments où il y a un risque de dépasser le seuil
 * Gestion des différents thèmes sur Jeedom.
+* Affichage ou pas du panneau pour les prévisions heures par heures
 
 Pour l'utilisation du widget, il est nécessaire de :
 
