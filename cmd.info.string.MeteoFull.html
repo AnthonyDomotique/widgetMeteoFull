@@ -1383,7 +1383,8 @@
     function fetch() {
       var latitude = ('#latitude#' != '#'+'latitude#') ? "#latitude#" : "48.85661";
 	  var longitude = ('#longitude#' != '#'+'longitude#') ? "#longitude#" : "2.3514616";
-      var cheminImage = ('#image#' != '#'+'image#') ? "#image#" : "https://www.prevision-meteo.ch/style/images/icon/"; 
+      var cheminImage = ('#images#' != '#'+'images#') ? "#images#" : "https://www.prevision-meteo.ch/style/images/icon/"; 
+      var cheminImageObligatoire = ('#images#' != '#'+'images#') ? "#images#" : "/data/customTemplates/dashboard/cmd.info.string.MeteoFull"; 
       var url = "https://www.prevision-meteo.ch/services/json/lat=" + latitude + "lng=" + longitude;
 	  var previHeures = ('#previsionsHeures#' != '#'+'previsionsHeures#') ? "#previsionsHeures#" : "NON";
 	  var tempCouleur = ('#temperaturesCouleur#' != '#'+'temperaturesCouleur#') ? "#temperaturesCouleur#" : "NON";
@@ -1406,7 +1407,7 @@
 	  // GESTION DES IMAGES FIXES
 	  $("img").each(function(){
 	    if ($(this).attr("data-img") !== undefined) {
-		  $(this).attr("src",cheminImage+$(this).attr("data-img")+"-"+theme+".png");
+		  $(this).attr("src",cheminImageObligatoire+$(this).attr("data-img")+"-"+theme+".png");
 		}
 	  });
 	  

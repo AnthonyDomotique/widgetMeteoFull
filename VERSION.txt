@@ -1,3 +1,5 @@
+2020-07-08 - #001.02 : Mise à jour Readme & dossiers images & gestions des dossiers dans le widget
+
 2020-07-08 - #001.01 : Mise à jour Readme
 
 2020-07-08 - #001.00 : Mise en production

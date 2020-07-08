@@ -1,27 +1,42 @@
-Bonjour et merci pour l'intérêt porté à mon widget MeteoFull. Il est disponible en utilisation privée, personnelle, ... Bref faites-vous plaisir. 
+***Bonsoir à tous. Il est disponible !! Faites-vous plaisir.***
 
-Le widget permet d'obtenir une météo sur 5 jours, mais également heures par heures. De plus vous pouvez le personnaliser. En effet, plusieurs options vous permettrons de le modifier comme bon vous semble.**
- 
-* Affichage ou pas d'un dégradé pour la température comme pour la température ressentie
-* Affichage ou pas d'un dégradé pour les rafales, l'humidité
-* Affichage d'un seuil pour le vent, les précipitations afin de visualiser les moments où il y a un risque de dépasser le seuil
-* Gestion des différents thèmes sur Jeedom.
+**Pour information :**
+Je suis en réflexion sur le fait de développer un plugin de ce widget afin de bénéficier de commandes pour vos scénarios notamment. Je vous tiendrais au courant de l'évolution.
 
-Pour l'utilisation du widget, il est nécessaire de :
+**Le widget permet de :**
+- Obtenir une météo sur 5 jours, 
+- Heures par heures pour les 5 jours. 
+- Personnalisation poussée :
+   + Affichage ou pas d'un dégradé pour la température, la température ressentie, les rafales, l'humidité (de manière indépendante)
+   + Affichage d'un seuil pour le vent, les précipitations 
+   + Gestion des thèmes de Jeedom.
+   + Affichage ou pas du panneau heures par heures
 
-* Créer un widget (ou importer le widget) dans Jeedom
-* Copier les images si vous le souhaitez
-* Créer un virtuel avec une commande de type information et de type autre ainsi que décocher l'historisation de la commande
-* Affecter à cette commande le widget MeteoFull
-* Ajouter les options suivantes (bien respecter l'ortographe et la casse) : 
-	* image : chemin où sont stockées les images (exemple : /data/customTemplates/dashboard/METEO/) (Par défaut icone du site https://www.prevision-meteo.ch)
-	* keyAPI : clé nécessaire afin de faire fonctionner une partie du widget. Pour ce faire, il est nécessaire de créer un compte et de prendre la clé gratuite sur : https://www.weatherbit.io/
-	* latitude : la latitude (en décimale) du lieu pour la maison (Par défaut Paris)
-	* longitude : la longitude (en décimale) du lieu pour la maison (Par défaut Paris)
-	* previsionsHeures : permet d'afficher ou pas le panneau de prévisions des heures (OUI / NON - Par défaut à NON)
-	* temperaturesCouleur : permet d'afficher ou non le dégradé de couleurs pour les températures (OUI / NON - Par défaut à NON). Si non, il y aura bleu pour le mini et rouge pour le maxi au niveau des températures quotidiennes.
-	* temperaturesRessentieCouleur : permet d'afficher ou non le dégradé de couleurs pour les températures ressenties (OUI / NON - Par défaut à NON)
-	* rafalesCouleur : permet d'afficher ou non le dégradé de couleurs pour les rafales (OUI / NON - Par défaut à NON)
-	* humiditeCouleur : permet d'afficher ou non le dégradé de couleurs pour l'humidité (OUI / NON - Par défaut à NON)
-	* seuilVent : permet de définir un seuil (en km/h) à partir du quel, l'indicateur passera dans une couleur rouge pour l'écriture (par défaut à 200)
-	* seuilPrecipitation : permet de définir un seuil (en mm) à partir du quel, l'indicateur passera dans une couleur bleue pour l'écriture (par défaut à 50)
+**Pour l'utilisation du widget, il est nécessaire de :**
+- Créer un widget (ou importer le widget) dans Jeedom
+- Copier les images se trouvant dans le dossier "cmd.info.string.MeteoFull" au bonne endroit : /data/customTemplates/dashboard/. **Garder le même nom que le dossier source ou alors n'oubliez pas l'option "images" permettant d'indiquer le chemin des images**
+- Copier les images des conditions (sans le dossier) si vous le souhaitez dans le même dossier et au même endroit que les autres images
+- Créer un virtuel avec une commande de type information et de type autre ainsi que décocher l'historisation de la commande
+- Affecter à cette commande le widget MeteoFull
+- Ajouter les options obligatoires suivantes (**bien respecter l'orthographe et la casse**) :
+   + keyAPI : clé nécessaire afin de faire fonctionner une partie du widget. Pour ce faire, il est nécessaire de créer un compte et de prendre la clé gratuite sur : https://www.weatherbit.io/
+   + latitude : la latitude (en décimale) du lieu souhaité (Par défaut Paris)
+   + longitude : la longitude (en décimale) du lieu souhaité  (Par défaut Paris)
+
+**Pour la personnalisation du widget, vous avez ces options supplémentaires si vous le souhaitez :** 
+   + images : chemin où sont stockées les images (exemple : /data/customTemplates/dashboard/cmd.info.string.MeteoFull/) (Par défaut si l'option n'est pas renseignée, les icones des conditions viendront du site https://www.prevision-meteo.ch, les autres images seront bien présentes)
+   + previsionsHeures : permet d'afficher ou pas le panneau de prévisions des heures (OUI / NON - Par défaut à NON)
+   + temperaturesCouleur : permet d'afficher ou non le dégradé de couleurs pour les températures (OUI / NON - Par défaut à NON). Si non, il y aura bleu pour le mini et rouge pour le maxi au niveau des températures quotidiennes.
+   + temperaturesRessentieCouleur : permet d'afficher ou non le dégradé de couleurs pour les températures ressenties (OUI / NON - Par défaut à NON)
+   + rafalesCouleur : permet d'afficher ou non le dégradé de couleurs pour les rafales (OUI / NON - Par défaut à NON)
+   + humiditeCouleur : permet d'afficher ou non le dégradé de couleurs pour l'humidité (OUI / NON - Par défaut à NON)
+   + seuilVent : permet de définir un seuil (en km/h) à partir duquel, l'indicateur passera dans une couleur rouge pour l'écriture (par défaut à 200)
+   + seuilPrecipitations : permet de définir un seuil (en mm) à partir duquel, l'indicateur passera dans une couleur bleue pour l'écriture (par défaut à 50)
+
+**Le voici :**
+https://github.com/AnthonyDomotique/widgetMeteoFull
+
+**Pour le support :**
+Merci d'utiliser le canal sur le discord (DOMOTECH) suivant : #devapps-anthony
+
+**Enfin, je voudrais remercier par ordre alphabétique, @iPapy, @jcamus86, @Jerome, @Tom's pour tous les tests et leur disponibilité. Sans eux, vous ne pourriez pas utiliser ce widget.
