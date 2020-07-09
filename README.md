@@ -14,7 +14,9 @@ Je suis en réflexion sur le fait de développer un plugin de ce widget afin de 
 
 **Installation :**
 + Grâce à Nebz, il peut être installé en une seule commande la voici : 
+```
 cd /var/www/html/data/customTemplates/dashboard;sudo wget https://github.com/AnthonyDomotique/widgetMeteoFull/archive/master.zip; sudo unzip -o master.zip ; sudo cp -fR widgetMeteoFull-master/* .;sudo cp -f Images\ conditions/* cmd.info.string.MeteoFull/;sudo rm -fR widgetMeteoFull-master/;sudo rm -f master.zip
+```
 
 Sinon :
 - Créer un widget (ou importer le widget) dans Jeedom
