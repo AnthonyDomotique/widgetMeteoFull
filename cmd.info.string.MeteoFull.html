@@ -5,7 +5,7 @@
   Website : 
   Tutorial : https://github.com/AnthonyDomotique/widgetMeteoFull
   Support : Discord DOMOTECH - Canal : #devapps-anthony
-  Last Update : 2020-07-08 - version #001.06
+  Last Update : 2020-07-08 - version #001.07
  -->
 
   <div id="meteoWidget" class="">
@@ -1439,7 +1439,7 @@
 		  case "O": angleVentCourant = 270; break;
 		  case "NO": angleVentCourant = 315; break;		  
 		}
-        $('#meteoPrevInstantVent').html("<div id='meteoPrevInstantVentDiv'>" + dataWeather.current_condition.wnd_spd + " <span class='meteoUnite'>km/h</span> - <img class='imgDirVent' src='"+cheminImage+"manche-air.png' title='"+dataWeather.current_condition.wnd_dir+" ("+angleVentCourant+"°)' alt='"+dataWeather.current_condition.wnd_dir+" ("+angleVentCourant+"°)' /></div>");
+        $('#meteoPrevInstantVent').html("<div id='meteoPrevInstantVentDiv'>" + dataWeather.current_condition.wnd_spd + " <span class='meteoUnite'>km/h</span> - <img class='imgDirVent' src='"+cheminImageObligatoire+"manche-air.png' title='"+dataWeather.current_condition.wnd_dir+" ("+angleVentCourant+"°)' alt='"+dataWeather.current_condition.wnd_dir+" ("+angleVentCourant+"°)' /></div>");
 		$('#meteoPrevInstantVent img').css("transform","rotate("+angleVentCourant+"deg)");
 		if (dataWeather.current_condition.wnd_spd >= seuilVent) {
 		  $('#meteoPrevInstantVent').css("color","rgb(265,69,0)");
@@ -1609,7 +1609,7 @@
 		      $("#"+"meteoPrevJ"+numJour+"HrsTempRess"+heure).css("color",(previsions.WNDCHILL2m == null ? (previsions.HUMIDEX == null ? "rgb(172,172,172)" : "var(--tempFont"+Math.round(previsions.HUMIDEX)+")") : "var(--tempFont"+Math.round(previsions.WNDCHILL2m)+")"));
 			}
 		    $("#"+"meteoPrevJ"+numJour+"HrsVent"+heure).html("<div id='meteoPrevJ"+numJour+"HrsVent"+heure+"Div'>" + previsions.WNDSPD10m + " <span class='meteoUniteHeures'>km/h</span></div>");
-		    $("#"+"meteoPrevJ"+numJour+"HrsVentDir"+heure).html("<img class='imgDirVent' src='"+cheminImage+"manche-air.png' title='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' alt='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' />");
+		    $("#"+"meteoPrevJ"+numJour+"HrsVentDir"+heure).html("<img class='imgDirVent' src='"+cheminImageObligatoire+"manche-air.png' title='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' alt='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' />");
 			$("#"+"meteoPrevJ"+numJour+"HrsVentDir"+heure+" img").css("transform","rotate("+previsions.WNDDIR10m+"deg)");
 			if (previsions.WNDSPD10m >= seuilVent) {
 			  $("#meteoPrevJ"+numJour+"HrsVent"+heure+"Div").css("color","rgb(265,69,0)");
@@ -1675,15 +1675,15 @@
 			ventVitMoyenne = ventVitMoyenne + previsions.WNDSPD10m;
 			switch(tabHeures[0]) {
 			  case "9":	
-				ventDir = "<img id='imgJ"+numJour+"hr09DirVent' class='imgDirVent' src='"+cheminImage+"manche-air.png' title='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' alt='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' />"; 
+				ventDir = "<img id='imgJ"+numJour+"hr09DirVent' class='imgDirVent' src='"+cheminImageObligatoire+"manche-air.png' title='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' alt='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' />"; 
 				degreRotation09 = previsions.WNDDIR10m; 
 				break;
 			  case "13": 
-				ventDir = ventDir + " - " + "<img id='imgJ"+numJour+"hr13DirVent' class='imgDirVent' src='"+cheminImage+"manche-air.png' title='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' alt='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' />"; 
+				ventDir = ventDir + " - " + "<img id='imgJ"+numJour+"hr13DirVent' class='imgDirVent' src='"+cheminImageObligatoire+"manche-air.png' title='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' alt='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' />"; 
 				degreRotation13 = previsions.WNDDIR10m; 
 				break;
 			  case "19": 
-				ventDir = ventDir + " - " + "<img id='imgJ"+numJour+"hr19DirVent' class='imgDirVent' src='"+cheminImage+"manche-air.png' title='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' alt='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' />"; 
+				ventDir = ventDir + " - " + "<img id='imgJ"+numJour+"hr19DirVent' class='imgDirVent' src='"+cheminImageObligatoire+"manche-air.png' title='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' alt='"+previsions.WNDDIRCARD10+" ("+previsions.WNDDIR10m+"°)' />"; 
 				degreRotation19 = previsions.WNDDIR10m; 
 				break;
 		    }
