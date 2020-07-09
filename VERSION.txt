@@ -1,4 +1,7 @@
-2020-07-08 - #001.04 : 
+2020-07-08 - #001.06 : 
+	* Correction du undefined sur un design (du aux commentaires ajoutés précédemment)
+
+2020-07-08 - #001.05 : 
 	* Correction CSS des backgrounds afin que les fonds d'écrans non uni puisse se voir également
 
 2020-07-08 - #001.04 : 

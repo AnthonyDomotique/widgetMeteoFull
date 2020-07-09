@@ -1,13 +1,13 @@
-<!--
+<div style="min-width:600px;max-width:800px;height:240px;" class="cmd tooltips cmd-widget" data-type="info" data-subtype="string" data-cmd_id="#id#" data-cmd_uid="#uid#">
+  <!--
   Widget name : widgetMeteoFull
   Author : AnthonyDomotique (Discord DOMOTECH : @Anthony / @Thloïn#3249
   Website : 
   Tutorial : https://github.com/AnthonyDomotique/widgetMeteoFull
   Support : Discord DOMOTECH - Canal : #devapps-anthony
-  Last Update : 2020-07-08 - version #001.05
+  Last Update : 2020-07-08 - version #001.06
  -->
 
-<div style="min-width:600px;max-width:800px;height:240px;" class="cmd tooltips cmd-widget" data-type="info" data-subtype="string" data-cmd_id="#id#" data-cmd_uid="#uid#">
   <div id="meteoWidget" class="">
     <div id="meteoPrevisionsJours" class="">
 	  <table>
@@ -1389,7 +1389,7 @@
       var latitude = ('#latitude#' != '#'+'latitude#') ? "#latitude#" : "48.85661";
 	  var longitude = ('#longitude#' != '#'+'longitude#') ? "#longitude#" : "2.3514616";
       var cheminImage = ('#images#' != '#'+'images#') ? "#images#" : "https://www.prevision-meteo.ch/style/images/icon/"; 
-      var cheminImageObligatoire = ('#images#' != '#'+'images#') ? "#images#" : "/data/customTemplates/dashboard/cmd.info.string.MeteoFull"; 
+      var cheminImageObligatoire = ('#images#' != '#'+'images#') ? "#images#" : "/data/customTemplates/dashboard/cmd.info.string.MeteoFull/"; 
       var url = "https://www.prevision-meteo.ch/services/json/lat=" + latitude + "lng=" + longitude;
 	  var previHeures = ('#previsionsHeures#' != '#'+'previsionsHeures#') ? "#previsionsHeures#" : "NON";
 	  var tempCouleur = ('#temperaturesCouleur#' != '#'+'temperaturesCouleur#') ? "#temperaturesCouleur#" : "NON";
@@ -1765,7 +1765,7 @@
 	  
 	  // PARTIE POUR LE SOLEIL ET LA LUNE
       var cheminImage = ('#images#' != '#'+'images#') ? "#images#" : "https://www.prevision-meteo.ch/style/images/icon/"; 
-      var cheminImageObligatoire = ('#images#' != '#'+'images#') ? "#images#" : "/data/customTemplates/dashboard/cmd.info.string.MeteoFull"; 
+      var cheminImageObligatoire = ('#images#' != '#'+'images#') ? "#images#" : "/data/customTemplates/dashboard/cmd.info.string.MeteoFull/"; 
 	  
 	  var keyApi = ('#keyAPI#' != '#'+'keyAPI#') ? "#keyAPI#" : ""; 
 	  
