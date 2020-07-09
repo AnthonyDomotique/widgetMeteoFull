@@ -1759,7 +1759,8 @@
       });
 	  
 	  // PARTIE POUR LE SOLEIL ET LA LUNE
-      var cheminImage = ('#image#' != '#'+'image#') ? "#image#" : "https://www.prevision-meteo.ch/style/images/icon/"; 
+      var cheminImage = ('#images#' != '#'+'images#') ? "#images#" : "https://www.prevision-meteo.ch/style/images/icon/"; 
+      var cheminImageObligatoire = ('#images#' != '#'+'images#') ? "#images#" : "/data/customTemplates/dashboard/cmd.info.string.MeteoFull"; 
 	  
 	  var keyApi = ('#keyAPI#' != '#'+'keyAPI#') ? "#keyAPI#" : ""; 
 	  
@@ -1779,7 +1780,7 @@
 			  $("#"+"meteoPrevJour"+j+"Soleil").html(("0" + leverSoleil.getHours()).slice(-2)+"h"+("0" + leverSoleil.getMinutes()).slice(-2) + " <span id='soleilUVJ"+j+"' class='soleilUV'>UV : " + (Math.round(condition.uv)-1) + "</span> " + ("0" + coucherSoleil.getHours()).slice(-2)+"h"+("0" + coucherSoleil.getMinutes()).slice(-2));
 			  $("#soleilUVJ"+j).css("background-color","var(--uv"+(Math.round(condition.uv)-1)+")");
 			  $("#soleilUVJ"+j).css("color","var(--uvFont"+(Math.round(condition.uv)-1)+")");
-			  $("#"+"meteoPrevJour"+j+"Lune").html(("0" + leverLune.getHours()).slice(-2)+"h"+("0" + leverLune.getMinutes()).slice(-2) + " <img src='"+cheminImage+"lune"+Math.round(condition.moon_phase_lunation * 30)+".png' /> "  + ("0" + coucherLune.getHours()).slice(-2)+"h"+("0" + coucherLune.getMinutes()).slice(-2));
+			  $("#"+"meteoPrevJour"+j+"Lune").html(("0" + leverLune.getHours()).slice(-2)+"h"+("0" + leverLune.getMinutes()).slice(-2) + " <img src='"+cheminImageObligatoire+"lune"+Math.round(condition.moon_phase_lunation * 30)+".png' /> "  + ("0" + coucherLune.getHours()).slice(-2)+"h"+("0" + coucherLune.getMinutes()).slice(-2));
 			});
 		  }
 		});
