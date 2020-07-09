@@ -13,8 +13,9 @@ Je suis en réflexion sur le fait de développer un plugin de ce widget afin de 
    + Affichage ou pas du panneau heures par heures
 
 **Installation : **
-- Grâce à Nebz, il peut être installé en une seule commande la voici : 
-	cd /var/www/html/data/customTemplates/dashboard;sudo wget https://github.com/AnthonyDomotique/widgetMeteoFull/archive/master.zip; sudo unzip -o master.zip ; sudo cp -fR widgetMeteoFull-master/* .;sudo cp -f Images\ conditions/* cmd.info.string.MeteoFull/;sudo rm -fR widgetMeteoFull-master/;sudo rm -f master.zip
++ Grâce à Nebz, il peut être installé en une seule commande la voici : 
+cd /var/www/html/data/customTemplates/dashboard;sudo wget https://github.com/AnthonyDomotique/widgetMeteoFull/archive/master.zip; sudo unzip -o master.zip ; sudo cp -fR widgetMeteoFull-master/* .;sudo cp -f Images\ conditions/* cmd.info.string.MeteoFull/;sudo rm -fR widgetMeteoFull-master/;sudo rm -f master.zip
+
 Sinon :
 - Créer un widget (ou importer le widget) dans Jeedom
 - Copier les images se trouvant dans le dossier "cmd.info.string.MeteoFull" au bonne endroit : /data/customTemplates/dashboard/. **Garder le même nom que le dossier source ou alors n'oubliez pas l'option "images" permettant d'indiquer le chemin des images**
