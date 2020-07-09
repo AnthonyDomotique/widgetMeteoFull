@@ -1,3 +1,7 @@
+2020-07-08 - #001.04 : 
+	* Ajout information général en haut du widget
+	* Ajout de la commande pour l'installation en une ligne (par Nebz)
+
 2020-07-08 - #001.03 : Correction de l'option images
 
 2020-07-08 - #001.02 : Mise à jour Readme & dossiers images & gestions des dossiers dans le widget

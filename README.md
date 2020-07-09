@@ -12,10 +12,15 @@ Je suis en réflexion sur le fait de développer un plugin de ce widget afin de 
    + Gestion des thèmes de Jeedom.
    + Affichage ou pas du panneau heures par heures
 
-**Pour l'utilisation du widget, il est nécessaire de :**
+**Installation : **
+- Grâce à Nebz, il peut être installé en une seule commande la voici : 
+	cd /var/www/html/data/customTemplates/dashboard;sudo wget https://github.com/AnthonyDomotique/widgetMeteoFull/archive/master.zip; sudo unzip -o master.zip ; sudo cp -fR widgetMeteoFull-master/* .;sudo cp -f Images\ conditions/* cmd.info.string.MeteoFull/;sudo rm -fR widgetMeteoFull-master/;sudo rm -f master.zip
+Sinon :
 - Créer un widget (ou importer le widget) dans Jeedom
 - Copier les images se trouvant dans le dossier "cmd.info.string.MeteoFull" au bonne endroit : /data/customTemplates/dashboard/. **Garder le même nom que le dossier source ou alors n'oubliez pas l'option "images" permettant d'indiquer le chemin des images**
 - Copier les images des conditions (sans le dossier) si vous le souhaitez dans le même dossier et au même endroit que les autres images
+
+**Pour l'utilisation du widget, il est nécessaire de :**
 - Créer un virtuel avec une commande de type information et de type autre ainsi que décocher l'historisation de la commande
 - Affecter à cette commande le widget MeteoFull
 - Ajouter les options obligatoires suivantes (**bien respecter l'orthographe et la casse**) :
